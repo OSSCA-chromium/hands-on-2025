@@ -53,4 +53,4 @@ $ git push origin 250420-euisang-test
 5. Pull Request 생성
 
 ## CONTRIBUTORS
-- [@amoseui] (https://www.github.com/amoseui)
+- [@amoseui](https://www.github.com/amoseui)
