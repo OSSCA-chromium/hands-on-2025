@@ -25,3 +25,8 @@ $ git checkout -b 250420-euisang-test
 $ git push origin 250420-euisang-test
 ``
 5. Pull Request 생성
+
+## CONTRIBUTORS
+|구분|이름|github|
+|---|---|---|
+|멘토|임의상|@amoseui|
