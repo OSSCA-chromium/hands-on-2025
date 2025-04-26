@@ -29,4 +29,4 @@ $ git push origin 250420-euisang-test
 ## CONTRIBUTORS
 |구분|이름|github|
 |---|---|---|
-|멘토|임의상|@amoseui|
+|멘토|임의상|https://github.com/amoseui|
