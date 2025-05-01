@@ -3,7 +3,7 @@
 
 ## URLs
 - [Chromium Projects](https://www.chromium.org/chromium-projects/)
-- [Chromium Docs](https://chromium.googlesource.com/chromium/src/+/main/docs)
+- [Chromium Docs](https://chromium.googlesource.com/chromium/src/+/main/docs/README.md)
 - [Chromium Contribution Guide](https://chromium.googlesource.com/chromium/src/+/main/docs/contributing.md)
 - [Chromium-dev group](https://groups.google.com/u/2/a/chromium.org/g/chromium-dev)
 - [blink-dev group](https://groups.google.com/a/chromium.org/g/blink-dev)
@@ -25,9 +25,9 @@
 - [Chrome for Developers YouTube](https://www.youtube.com/@ChromeDevs)
 - [BlinkOn YouTube](https://www.youtube.com/@blinkontalks)
 - [MDN docs](https://developer.mozilla.org/docs/Web)
-- [Can I Use](https://caniuse.com) 
+- [Can I Use](https://caniuse.com)
 
-## CONTRIBUTION GUIDE 
+## CONTRIBUTION GUIDE
 - [CONTRIBUTING.md](CONTRIBUTING.md) 여기를 봐주세요.
 
 ## CONTRIBUTORS
