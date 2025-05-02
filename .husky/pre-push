@@ -1,1 +1,12 @@
-npm run test && npm run lint && npm run build
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# push 전에 테스트만 실행
+echo "테스트 실행 중..."
+npm run test
+
+# ESLint v9 호환 문제로 인해 lint 명령어 비활성화
+# npm run lint
+
+# 빌드 실행
+npm run build
