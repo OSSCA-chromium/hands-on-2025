@@ -19,7 +19,7 @@ jest.mock('gray-matter', () => {
         const frontmatterLines = frontmatterString.split('\n');
         const data: Record<string, string> = {};
         
-        frontmatterLines.forEach(line => {
+        frontmatterLines.forEach((line: string) => {
           const [key, ...valueParts] = line.split(':');
           if (key && valueParts.length) {
             data[key.trim()] = valueParts.join(':').trim();

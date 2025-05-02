@@ -1,4 +1,5 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: '시작하기 | Chromium 컨트리뷰션 가이드',
@@ -40,7 +41,7 @@ export default function GettingStartedPage() {
             <pre className="bg-gray-100 p-3 rounded mt-2 overflow-x-auto">
               <code>
                 git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git{'\n'}
-                export PATH="$PATH:/path/to/depot_tools"
+                export PATH=&quot;$PATH:/path/to/depot_tools&quot;
               </code>
             </pre>
           </li>
@@ -93,12 +94,12 @@ export default function GettingStartedPage() {
         </p>
         <ul className="list-disc pl-6 space-y-2">
           <li>
-            <a 
+            <Link 
               href="/contributing" 
               className="text-blue-600 hover:underline"
             >
               컨트리뷰션 가이드 읽기
-            </a>
+            </Link>
           </li>
           <li>
             <a 
@@ -111,12 +112,12 @@ export default function GettingStartedPage() {
             </a>
           </li>
           <li>
-            <a 
+            <Link 
               href="/contributions" 
               className="text-blue-600 hover:underline"
             >
               다른 학생들의 컨트리뷰션 보기
-            </a>
+            </Link>
           </li>
         </ul>
       </section>
