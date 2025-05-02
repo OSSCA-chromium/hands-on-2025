@@ -2,13 +2,7 @@ import { notFound } from 'next/navigation';
 import { getContributionBySlug, getAllContributionSlugs } from '@/lib/contributions';
 import { Metadata } from 'next';
 
-interface ContributionPageProps {
-  params: {
-    slug: string;
-  };
-}
-
-export async function generateMetadata({ params }: ContributionPageProps): Promise<Metadata> {
+export async function generateMetadata({ params }: any): Promise<Metadata> {
   const contribution = await getContributionBySlug(params.slug);
 
   if (!contribution) {
@@ -32,7 +26,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function ContributionPage({ params }: ContributionPageProps) {
+export default async function ContributionPage({ params }: any) {
   const contribution = await getContributionBySlug(params.slug);
 
   if (!contribution) {
