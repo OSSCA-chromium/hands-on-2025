@@ -1,0 +1,23 @@
+{
+  "name": "hands-on-2025",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "deploy": "next build && gh-pages -d out"
+  },
+  "dependencies": {
+    "gray-matter": "^4.0.3",
+    "next": "^14.2.28",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "remark": "^15.0.1",
+    "remark-html": "^16.0.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.1.1"
+  }
+}
