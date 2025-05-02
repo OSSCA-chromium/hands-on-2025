@@ -18,6 +18,8 @@
     "remark-html": "^16.0.1"
   },
   "devDependencies": {
+    "eslint": "8.57.1",
+    "eslint-config-next": "15.3.1",
     "gh-pages": "^6.1.1"
   }
 }

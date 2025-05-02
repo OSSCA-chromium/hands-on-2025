@@ -1,0 +1,37 @@
+name: Pull Request Checks
+
+on:
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  lint-and-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Run linting
+        run: npm run lint
+        
+      - name: Run build
+        run: npm run build
+        
+      - name: Check build output
+        run: |
+          if [ -d "out" ]; then
+            echo "✅ Build succeeded!"
+          else
+            echo "❌ Build failed: 'out' directory not found"
+            exit 1
+          fi 
