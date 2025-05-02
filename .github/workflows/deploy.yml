@@ -24,11 +24,11 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build
+      - name: Build and Export
         run: npm run build
-
-      - name: Copy .nojekyll
-        run: cp public/.nojekyll out/
+        
+      - name: Add .nojekyll file
+        run: touch out/.nojekyll
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
