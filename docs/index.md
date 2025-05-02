@@ -16,5 +16,6 @@ description: Chromium 프로젝트에 기여하는 방법을 배우고 실습하
 ## 최근 업데이트
 
 {% for post in site.posts limit:5 %}
+
 - [{{ post.title }}]({{ post.url | relative_url }}) - {{ post.date | date: "%Y-%m-%d" }}
-{% endfor %} 
+  {% endfor %}

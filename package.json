@@ -7,7 +7,18 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "deploy": "next build && gh-pages -d out"
+    "lint:staged": "lint-staged",
+    "start": "next test",
+    "deploy": "next build && gh-pages -d out",
+    "prepare": "husky",
+    "format": "prettier --write ."
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,css,md}": [
+      "prettier --write",
+      "bash -c \"[ -z $(grep -l '[[:blank:]]$\\|\\t\\|^$[[:blank:]]' $1) ]\"",
+      "eslint --fix"
+    ]
   },
   "dependencies": {
     "gray-matter": "^4.0.3",
@@ -18,8 +29,13 @@
     "remark-html": "^16.0.1"
   },
   "devDependencies": {
-    "eslint": "8.57.1",
-    "eslint-config-next": "15.3.1",
-    "gh-pages": "^6.1.1"
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.25.1",
+    "eslint": "^9.25.1",
+    "eslint-config-next": "^15.3.1",
+    "gh-pages": "^6.1.1",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.1",
+    "prettier": "^3.5.3"
   }
 }
