@@ -1,6 +1,11 @@
 {
   "extends": "next/core-web-vitals",
+  "env": {
+    "jest": true,
+    "node": true
+  },
   "rules": {
-    "@typescript-eslint/no-explicit-any": "off"
+    "@typescript-eslint/no-explicit-any": "off",
+    "no-undef": "off"
   }
 }

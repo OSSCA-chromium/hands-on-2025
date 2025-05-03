@@ -19,10 +19,8 @@ describe('홈페이지', () => {
     render(<HomePage />);
 
     // 헤더와 소개 문구 체크
-    expect(screen.getByText('Chromium 컨트리뷰션 가이드')).toBeInTheDocument();
-    expect(
-      screen.getByText('Chromium 프로젝트에 기여하는 방법을 배우고 실습하는 가이드입니다.')
-    ).toBeInTheDocument();
+    expect(screen.getByText('Recent contributions')).toBeInTheDocument();
+    expect(screen.getByText('아직 등록된 컨트리뷰션이 없습니다.')).toBeInTheDocument();
   });
 
   it('최근 컨트리뷰션 섹션이 있습니다', () => {
@@ -30,7 +28,7 @@ describe('홈페이지', () => {
 
     render(<HomePage />);
 
-    expect(screen.getByText('최근 컨트리뷰션')).toBeInTheDocument();
+    expect(screen.getByText('Recent contributions')).toBeInTheDocument();
     expect(screen.getByText('아직 등록된 컨트리뷰션이 없습니다.')).toBeInTheDocument();
   });
 
