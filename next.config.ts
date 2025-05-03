@@ -6,6 +6,18 @@ const nextConfig: NextConfig = {
   trailingSlash: true,
   basePath: '/hands-on-2025',
   images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'github.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
+        pathname: '/**',
+      }
+    ],
     unoptimized: true,
   },
 };
