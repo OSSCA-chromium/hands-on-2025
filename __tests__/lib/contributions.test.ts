@@ -40,17 +40,6 @@ jest.mock('gray-matter', () => {
   });
 });
 
-jest.mock('remark', () => ({
-  remark: jest.fn().mockImplementation(() => ({
-    use: jest.fn().mockReturnThis(),
-    process: jest.fn().mockResolvedValue({
-      toString: jest.fn().mockReturnValue('<p>테스트 HTML 내용</p>')
-    })
-  }))
-}));
-
-jest.mock('remark-html', () => jest.fn());
-
 describe('contributions 유틸리티', () => {
   beforeEach(() => {
     jest.clearAllMocks();
