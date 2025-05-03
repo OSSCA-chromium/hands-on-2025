@@ -2,13 +2,15 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 import React from "react";
+import Image from "next/image";
+import LogoImage from "../../public/logo.png";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Chromium 컨트리뷰션 가이드",
-  description: "Chromium 프로젝트에 기여하는 방법을 배우고 실습하는 가이드",
+  title: "OSSCA Chromium",
+  description: "2025 OSSCA 참여형 Chromium 프로젝트",
 };
 
 export default function RootLayout({
@@ -22,8 +24,9 @@ export default function RootLayout({
         <header className="bg-blue-700 text-white py-4">
           <div className="container mx-auto px-4">
             <nav className="flex flex-col md:flex-row justify-between items-center">
-              <Link href="/" className="text-xl font-bold mb-2 md:mb-0">
-                Chromium 컨트리뷰션 가이드
+              <Link href="/" className="text-xl font-bold mb-2 md:mb-0 flex items-center">
+                <Image src={LogoImage} alt="OSSCA Chromium 로고" width={32} height={32} className="mr-2" />
+                OSSCA Chromium
               </Link>
               <div className="flex gap-6">
                 <Link href="/getting-started" className="hover:underline">
@@ -33,7 +36,7 @@ export default function RootLayout({
                   컨트리뷰션 가이드
                 </Link>
                 <Link href="/contributions" className="hover:underline">
-                  학생 컨트리뷰션
+                  Contributions
                 </Link>
               </div>
             </nav>

@@ -3,21 +3,12 @@ import { getAllContributions } from '@/lib/contributions';
 
 export default function Home() {
   // 최근 컨트리뷰션 3개만 가져오기
-  const contributions = getAllContributions().slice(0, 3);
+  const contributions = getAllContributions().slice(0, 3)
 
   return (
     <>
-      <section className="bg-blue-50 -mx-4 px-4 py-12 mb-8">
-        <div className="max-w-4xl mx-auto">
-          <h1 className="text-4xl font-bold mb-4">Chromium 컨트리뷰션 가이드</h1>
-          <p className="text-xl text-gray-700">
-            Chromium 프로젝트에 기여하는 방법을 배우고 실습하는 가이드입니다.
-          </p>
-        </div>
-      </section>
-
       <section className="mb-12">
-        <h2 className="text-2xl font-bold mb-6">최근 컨트리뷰션</h2>
+        <h2 className="text-2xl font-bold mb-6">Recent contributions</h2>
         {contributions.length > 0 ? (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {contributions.map((contribution) => (
@@ -42,7 +33,7 @@ export default function Home() {
             href="/contributions" 
             className="text-blue-600 hover:underline font-medium"
           >
-            모든 컨트리뷰션 보기 →
+            See all contributions →
           </Link>
         </div>
       </section>

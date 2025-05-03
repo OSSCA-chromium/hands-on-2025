@@ -1,5 +1,7 @@
 # hands-on-2025
 
+[![Deploy to GitHub Pages](https://github.com/OSSCA-chromium/hands-on-2025/actions/workflows/deploy.yml/badge.svg)](https://github.com/OSSCA-chromium/hands-on-2025/actions/workflows/deploy.yml)
+
 2025 오픈소스 컨트리뷰션 아카데미 체험형
 
 ## URLs
