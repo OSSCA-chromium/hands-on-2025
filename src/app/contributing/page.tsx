@@ -8,14 +8,14 @@ export const metadata: Metadata = {
 export default function ContributingPage() {
   return (
     <div className="max-w-3xl mx-auto">
-      <h1 className="text-3xl font-bold mb-6">Chromium 컨트리뷰션 가이드</h1>
+      <h1 className="text-3xl font-bold mb-6 text-black">Chromium 컨트리뷰션 가이드</h1>
       
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">컨트리뷰션 워크플로우</h2>
-        <p className="mb-4">
+        <h2 className="text-2xl font-semibold mb-4 text-black">컨트리뷰션 워크플로우</h2>
+        <p className="mb-4 text-black">
           Chromium 프로젝트에 기여하는 일반적인 워크플로우는 다음과 같습니다:
         </p>
-        <ol className="list-decimal pl-6 space-y-3">
+        <ol className="list-decimal pl-6 space-y-3 text-black">
           <li>해결할 이슈 찾기</li>
           <li>로컬에서 코드 변경하기</li>
           <li>변경 사항 테스트하기</li>
@@ -26,8 +26,8 @@ export default function ContributingPage() {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">이슈 찾기</h2>
-        <p className="mb-4">
+        <h2 className="text-2xl font-semibold mb-4 text-black">이슈 찾기</h2>
+        <p className="mb-4 text-black">
           첫 번째 컨트리뷰션을 위한 이슈를 찾는 좋은 방법은 <code>good-first-bug</code> 
           레이블이 있는 이슈를 찾는 것입니다.
         </p>
@@ -41,17 +41,17 @@ export default function ContributingPage() {
             Good First Bugs 목록 보기
           </a>
         </div>
-        <p>
+        <p className="text-black">
           또한 자신의 관심 영역이나 전문 분야와 관련된 이슈를 찾아보는 것도 좋은 방법입니다.
         </p>
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">코드 변경하기</h2>
-        <p className="mb-4">
+        <h2 className="text-2xl font-semibold mb-4 text-black">코드 변경하기</h2>
+        <p className="mb-4 text-black">
           이슈를 선택했다면, 다음 단계를 따라 코드를 변경합니다:
         </p>
-        <ol className="list-decimal pl-6 space-y-3">
+        <ol className="list-decimal pl-6 space-y-3 text-black">
           <li>
             <strong>새 브랜치 생성하기</strong>
             <pre className="bg-gray-100 p-3 rounded mt-2 overflow-x-auto">
@@ -82,17 +82,17 @@ export default function ContributingPage() {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">코드 스타일 및 리뷰 준비</h2>
-        <p className="mb-4">
+        <h2 className="text-2xl font-semibold mb-4 text-black">코드 스타일 및 리뷰 준비</h2>
+        <p className="mb-4 text-black">
           Chromium은 엄격한 코드 스타일 가이드라인을 따릅니다. 코드 리뷰를 준비하기 전에:
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-2 text-black">
           <li>코드 포맷팅이 Chromium 스타일 가이드를 따르는지 확인</li>
           <li>적절한 테스트 코드 추가</li>
           <li>코드 변경 사항에 대한 명확한 커밋 메시지 작성</li>
         </ul>
         <div className="bg-yellow-50 p-4 rounded mt-4">
-          <h3 className="font-semibold mb-2">커밋 메시지 형식</h3>
+          <h3 className="font-semibold mb-2 text-black">커밋 메시지 형식</h3>
           <pre className="bg-gray-100 p-3 rounded overflow-x-auto">
             <code>
               [컴포넌트]: 변경 사항에 대한 간결한 설명{'\n\n'}
@@ -105,11 +105,11 @@ export default function ContributingPage() {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">코드 리뷰 요청하기</h2>
-        <p className="mb-4">
+        <h2 className="text-2xl font-semibold mb-4 text-black">코드 리뷰 요청하기</h2>
+        <p className="mb-4 text-black">
           Chromium은 Gerrit을 사용하여 코드 리뷰를 진행합니다:
         </p>
-        <ol className="list-decimal pl-6 space-y-3">
+        <ol className="list-decimal pl-6 space-y-3 text-black">
           <li>
             <strong>변경 사항 업로드하기</strong>
             <pre className="bg-gray-100 p-3 rounded mt-2 overflow-x-auto">
@@ -138,11 +138,11 @@ export default function ContributingPage() {
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mb-4">리뷰 피드백 반영 및 제출</h2>
-        <p className="mb-4">
+        <h2 className="text-2xl font-semibold mb-4 text-black">리뷰 피드백 반영 및 제출</h2>
+        <p className="mb-4 text-black">
           리뷰어가 제공한 피드백을 반영하여 코드를 개선하세요:
         </p>
-        <ol className="list-decimal pl-6 space-y-3">
+        <ol className="list-decimal pl-6 space-y-3 text-black">
           <li>
             <strong>피드백에 따라 코드 수정하기</strong>
             <pre className="bg-gray-100 p-3 rounded mt-2 overflow-x-auto">
@@ -174,7 +174,7 @@ export default function ContributingPage() {
           </li>
         </ol>
         <div className="bg-green-50 p-4 rounded mt-6">
-          <p className="font-semibold">
+          <p className="font-semibold text-black">
             축하합니다! 이제 여러분은 Chromium 프로젝트에 기여한 개발자입니다.
           </p>
         </div>

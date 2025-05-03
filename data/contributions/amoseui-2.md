@@ -1,11 +1,9 @@
 ---
-title: CL 3979423 리뷰 제출 경험
-date: 2022-05-01
+title: "CL 3979423: Remove unnecessary code"
+date: 2022-05-02
 author: amoseui
 contribution_url: https://chromium-review.googlesource.com/c/chromium/src/+/3979423
-difficulty: 중간
-category: 코드 개선
-labels: ["UI", "refactoring", "code-health"]
+labels: ["code-cleanup", "refactoring"]
 status: merged
 ---
 

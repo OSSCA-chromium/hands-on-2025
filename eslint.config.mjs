@@ -21,7 +21,8 @@ export default [
   // 추가 규칙
   {
     rules: {
-      '@typescript-eslint/no-explicit-any': 'off'
+      '@typescript-eslint/no-explicit-any': 'off',
+      'next/dynamic-calls': 'off'
     }
   }
 ];

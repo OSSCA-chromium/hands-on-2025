@@ -1,8 +1,12 @@
 ---
 title: 크로미움 오류 수정 컨트리뷰션
-date: 2025-04-01
+date: 2025-05-11
 author: 홍길동
 contribution_url: https://chromium-review.googlesource.com/c/chromium/src/+/12345
+difficulty: 중간
+category: 버그 수정
+labels: ["memory", "WebRTC", "performance"]
+status: merged
 ---
 
 # 크로미움 오류 수정 컨트리뷰션
@@ -38,4 +42,4 @@ WebRTC 구현에서 `PeerConnection` 객체가 정상적으로 해제되지 않�
 - WebRTC 구현의 내부 동작 원리
 - 메모리 누수 디버깅 기법
 
-앞으로도 Chromium 프로젝트에 지속적으로 기여하고 싶습니다. 
+앞으로도 Chromium 프로젝트에 지속적으로 기여하고 싶습니다.

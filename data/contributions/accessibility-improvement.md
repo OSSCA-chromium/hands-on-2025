@@ -1,8 +1,12 @@
 ---
-title: 크로미움 접근성 개선 작업
+title: 크로미움 접근성 개선
 date: 2025-03-15
-author: 김영희
-contribution_url: https://chromium-review.googlesource.com/c/chromium/src/+/23456
+author: jane-doe
+contribution_url: https://chromium-review.googlesource.com/c/chromium/src/+/98765
+difficulty: 쉬움
+category: 접근성
+labels: ["a11y", "screen-reader", "UI"]
+status: in review
 ---
 
 # 크로미움 접근성 개선 작업
@@ -28,9 +32,9 @@ Chrome의 접근성 기능 개선을 위한 패치를 제출했습니다. 화면
 
 ```javascript
 // ARIA 속성 추가 예시
-const settingsSection = document.querySelector('.settings-section');
-settingsSection.setAttribute('role', 'region');
-settingsSection.setAttribute('aria-labelledby', 'settings-title');
+const settingsSection = document.querySelector(".settings-section");
+settingsSection.setAttribute("role", "region");
+settingsSection.setAttribute("aria-labelledby", "settings-title");
 ```
 
 또한 WCAG(Web Content Accessibility Guidelines) 2.1 AA 수준을 충족하기 위해 색상 대비를 조정했습니다.
@@ -46,4 +50,4 @@ settingsSection.setAttribute('aria-labelledby', 'settings-title');
 
 이번 작업을 통해 웹 접근성의 중요성과 구현 방법에 대해 깊이 이해할 수 있었습니다. 또한 Chromium 프로젝트에서 접근성 문제를 다루는 방식과 코드 리뷰 과정에서 접근성 관련 피드백을 반영하는 방법을 배웠습니다.
 
-앞으로도 Chrome의 접근성을 개선하는 작업에 지속적으로 기여하고 싶습니다. 
+앞으로도 Chrome의 접근성을 개선하는 작업에 지속적으로 기여하고 싶습니다.

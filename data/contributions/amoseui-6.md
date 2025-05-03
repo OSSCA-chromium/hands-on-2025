@@ -1,11 +1,9 @@
 ---
-title: CL 3979423 리뷰 제출 경험
-date: 2022-05-01
+title: "CL 6345678: Improve CSS parsing performance"
+date: 2023-01-15
 author: amoseui
-contribution_url: https://chromium-review.googlesource.com/c/chromium/src/+/3979423
-difficulty: 중간
-category: 코드 개선
-labels: ["UI", "refactoring", "code-health"]
+contribution_url: https://chromium-review.googlesource.com/c/chromium/src/+/6345678
+labels: ["performance", "CSS", "rendering"]
 status: merged
 ---
 

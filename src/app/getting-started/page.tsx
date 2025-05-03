@@ -9,11 +9,11 @@ export const metadata: Metadata = {
 export default function GettingStartedPage() {
   return (
     <div className="max-w-3xl mx-auto">
-      <h1 className="text-3xl font-bold mb-6">Chromium 컨트리뷰션 시작하기</h1>
+      <h1 className="text-3xl font-bold mb-6 text-black">Chromium 컨트리뷰션 시작하기</h1>
       
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">개요</h2>
-        <p className="mb-4">
+        <h2 className="text-2xl font-semibold mb-4 text-black">개요</h2>
+        <p className="mb-4 text-black">
           Chromium은 Google Chrome, Microsoft Edge, Opera 등 다양한 웹 브라우저의 
           기반이 되는 오픈 소스 웹 브라우저 프로젝트입니다. 이 가이드에서는 
           Chromium 프로젝트에 기여하는 방법을 단계별로 안내합니다.
@@ -21,8 +21,8 @@ export default function GettingStartedPage() {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">준비 사항</h2>
-        <ul className="list-disc pl-6 space-y-2">
+        <h2 className="text-2xl font-semibold mb-4 text-black">준비 사항</h2>
+        <ul className="list-disc pl-6 space-y-2 text-black">
           <li>Git에 대한 기본 지식</li>
           <li>C++, JavaScript 등 프로그래밍 언어에 대한 이해</li>
           <li>리눅스/macOS/Windows 개발 환경</li>
@@ -31,8 +31,8 @@ export default function GettingStartedPage() {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">소스 코드 설정</h2>
-        <ol className="list-decimal pl-6 space-y-4">
+        <h2 className="text-2xl font-semibold mb-4 text-black">소스 코드 설정</h2>
+        <ol className="list-decimal pl-6 space-y-4 text-black">
           <li>
             <strong>Depot Tools 설치하기</strong>
             <p className="mt-2">
@@ -72,8 +72,8 @@ export default function GettingStartedPage() {
       </section>
 
       <section className="mb-8">
-        <h2 className="text-2xl font-semibold mb-4">첫 번째 빌드</h2>
-        <p className="mb-4">
+        <h2 className="text-2xl font-semibold mb-4 text-black">첫 번째 빌드</h2>
+        <p className="mb-4 text-black">
           Chromium을 빌드하려면 다음 단계를 따르세요:
         </p>
         <pre className="bg-gray-100 p-3 rounded mb-4 overflow-x-auto">
@@ -82,17 +82,17 @@ export default function GettingStartedPage() {
             autoninja -C out/Default chrome
           </code>
         </pre>
-        <p>
+        <p className="text-black">
           이 과정은 시스템 사양에 따라 30분에서 몇 시간까지 소요될 수 있습니다.
         </p>
       </section>
 
       <section>
-        <h2 className="text-2xl font-semibold mb-4">다음 단계</h2>
-        <p className="mb-4">
+        <h2 className="text-2xl font-semibold mb-4 text-black">다음 단계</h2>
+        <p className="mb-4 text-black">
           Chromium을 성공적으로 빌드했다면, 이제 다음 단계로 넘어갈 준비가 되었습니다:
         </p>
-        <ul className="list-disc pl-6 space-y-2">
+        <ul className="list-disc pl-6 space-y-2 text-black">
           <li>
             <Link 
               href="/contributing" 

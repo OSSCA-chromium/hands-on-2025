@@ -7,8 +7,6 @@ import React from 'react';
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
-import hljs from 'highlight.js';
-import 'highlight.js/styles/atom-one-dark.css';
 
 // 마크다운 파일이 저장된 디렉토리
 const contributionsDirectory = path.join(process.cwd(), 'data/contributions');
@@ -22,22 +20,8 @@ interface ParamsProps {
 function simpleMarkdownToHtml(markdown: string): string {
   // 코드 블록 처리 (```...```) - 가장 먼저 처리해야 함
   let html = markdown.replace(/```([a-z]*)\n([\s\S]+?)\n```/g, (match, language, code) => {
-    let highlighted;
-    const escapedCode = code.replace(/</g, '&lt;').replace(/>/g, '&gt;');
-    
-    if (language && hljs.getLanguage(language)) {
-      try {
-        // 언어가 지정되어 있고 highlight.js가 지원하는 경우
-        highlighted = hljs.highlight(escapedCode, { language }).value;
-      } catch {
-        highlighted = escapedCode;
-      }
-    } else {
-      // 언어가 지정되지 않았거나 지원하지 않는 경우
-      highlighted = escapedCode;
-    }
-    
-    return `<pre class="bg-gray-800 rounded-md my-4 overflow-x-auto"><code class="hljs p-4 block">${highlighted}</code></pre>`;
+    const langClass = language ? ` language-${language}` : '';
+    return `<pre class="bg-gray-800 text-white p-4 rounded-md my-4 overflow-x-auto"><code class="block${langClass}">${code.replace(/</g, '&lt;').replace(/>/g, '&gt;')}</code></pre>`;
   });
   
   // 헤더 변환 (h1~h6)
@@ -50,41 +34,8 @@ function simpleMarkdownToHtml(markdown: string): string {
     .replace(/^###### (.+)$/gm, '<h6 class="text-base font-bold my-2">$1</h6>');
 
   // 목록 변환 (단순화)
-  // 순서 없는 목록 처리 (-, *, +로 시작)
   html = html.replace(/^\s*[-*+]\s+(.+)$/gm, '<li class="ml-6 list-disc my-1">$1</li>');
   html = html.replace(/(<li[^>]*>.*<\/li>\n*)+/g, '<ul class="my-4">$&</ul>');
-  
-  // 순서 있는 목록 처리 (1., 2. 등으로 시작)
-  html = html.replace(/^\s*(\d+)\.\s+(.+)$/gm, '<li class="ml-6 list-decimal my-1">$2</li>');
-  
-  // 순서 있는 목록 항목을 <ol> 태그로 묶기
-  const tempHtml = html.split('\n');
-  let inOrderedList = false;
-  let processedLines = [];
-  
-  for (let i = 0; i < tempHtml.length; i++) {
-    const line = tempHtml[i];
-    
-    if (line.includes('list-decimal')) {
-      if (!inOrderedList) {
-        processedLines.push('<ol class="my-4">');
-        inOrderedList = true;
-      }
-      processedLines.push(line);
-    } else if (inOrderedList && !line.includes('<li')) {
-      processedLines.push('</ol>');
-      inOrderedList = false;
-      processedLines.push(line);
-    } else {
-      processedLines.push(line);
-    }
-  }
-  
-  if (inOrderedList) {
-    processedLines.push('</ol>');
-  }
-  
-  html = processedLines.join('\n');
   
   // 인라인 코드
   html = html.replace(/`([^`]+)`/g, '<code class="bg-gray-100 px-1 py-0.5 rounded text-red-600">$1</code>');
@@ -185,7 +136,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function ContributionPage({ params }: ParamsProps) {
+export default async function ContributionPageDirect({ params }: ParamsProps) {
   const resolvedParams = await params;
   const slug = resolvedParams.slug;
   console.log('Page slug direct:', slug);

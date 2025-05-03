@@ -1,11 +1,9 @@
 ---
-title: CL 3979423 리뷰 제출 경험
-date: 2022-05-01
+title: "CL 5123456: Fix memory leak in WebRTC implementation"
+date: 2022-08-20
 author: amoseui
-contribution_url: https://chromium-review.googlesource.com/c/chromium/src/+/3979423
-difficulty: 중간
-category: 코드 개선
-labels: ["UI", "refactoring", "code-health"]
+contribution_url: https://chromium-review.googlesource.com/c/chromium/src/+/5123456
+labels: ["bug-fix", "WebRTC", "memory"]
 status: merged
 ---
 

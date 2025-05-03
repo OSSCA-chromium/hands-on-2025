@@ -1,12 +1,10 @@
 ---
-title: CL 3979423 리뷰 제출 경험
-date: 2022-05-01
+title: "CL 6508544: Fix broken links in Prerender WPT tests guide"
+date: 2023-05-03
 author: amoseui
-contribution_url: https://chromium-review.googlesource.com/c/chromium/src/+/3979423
-difficulty: 중간
-category: 코드 개선
-labels: ["UI", "refactoring", "code-health"]
-status: merged
+contribution_url: https://chromium-review.googlesource.com/c/chromium/src/+/6508544
+labels: ["documentation", "testing", "prerender"]
+status: in review
 ---
 
 # 크로미움 접근성 개선 작업

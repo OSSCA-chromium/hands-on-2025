@@ -13,12 +13,45 @@ const config: Config = {
           css: {
             maxWidth: 'none',
             color: 'inherit',
+            h1: {
+              color: '#000',
+              fontWeight: '700',
+            },
+            h2: {
+              color: '#000',
+              fontWeight: '600',
+            },
+            h3: {
+              color: '#000',
+              fontWeight: '600',
+            },
+            h4: {
+              color: '#000',
+              fontWeight: '600',
+            },
+            p: {
+              color: '#000',
+            },
+            li: {
+              color: '#000',
+            },
+            strong: {
+              color: '#000',
+              fontWeight: '600',
+            },
             a: {
               color: '#3b82f6',
               textDecoration: 'none',
               '&:hover': {
                 textDecoration: 'underline',
               },
+            },
+            pre: {
+              backgroundColor: '#1e293b',
+              color: '#e2e8f0',
+              overflow: 'auto',
+              padding: '1rem',
+              borderRadius: '0.375rem',
             },
             code: {
               color: '#24292e',
@@ -35,12 +68,18 @@ const config: Config = {
             'code::after': {
               content: 'none',
             },
+            blockquote: {
+              borderLeftColor: '#3b82f6',
+              color: '#4b5563',
+            },
           },
         },
       },
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
 };
 
 export default config; 

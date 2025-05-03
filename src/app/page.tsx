@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { getAllContributions } from '@/lib/contributions';
 
 export default function Home() {
@@ -7,43 +8,97 @@ export default function Home() {
 
   return (
     <>
-      <section className="mb-12">
-        <h2 className="text-2xl font-bold mb-6">Recent contributions</h2>
+      <section className="mb-9">
+        <h2 className="text-2xl font-bold mb-5 text-black">Recent contributions</h2>
         {contributions.length > 0 ? (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
             {contributions.map((contribution) => (
               <Link 
                 href={`/contributions/${contribution.slug}`} 
                 key={contribution.slug}
-                className="block p-6 border rounded-lg hover:shadow-md transition-shadow"
+                className="block p-5 border border-gray-200 rounded-lg hover:shadow-md transition-shadow bg-white h-full flex flex-col"
               >
-                <h3 className="text-xl font-semibold mb-2">{contribution.title}</h3>
-                <div className="text-sm text-gray-500 mb-3">
-                  {new Date(contribution.date).toLocaleDateString('ko-KR')} • {contribution.author}
+                <h3 className="text-xl font-semibold mb-1 text-black">{contribution.title}</h3>
+                
+                {/* Status 배지 및 Labels */}
+                <div className="flex flex-wrap gap-2 mb-1">
+                  {/* Status 배지 */}
+                  {contribution.status && (
+                    <span className={`px-2 py-1 text-xs text-white rounded-full font-medium ${
+                      contribution.status === 'in review' 
+                        ? 'bg-[#2563eb]' 
+                        : contribution.status === 'merged' 
+                          ? 'bg-[#16a34a]' 
+                          : 'bg-gray-600'
+                    }`}>
+                      {contribution.status === 'in review' ? 'IN REVIEW' : 
+                       contribution.status === 'merged' ? 'MERGED' : 
+                       contribution.status.toUpperCase()}
+                    </span>
+                  )}
+                  
+                  {/* Labels 칩 - 최대 2개만 표시 */}
+                  {contribution.labels && contribution.labels.length > 0 && 
+                    contribution.labels.slice(0, 2).map((label, index) => (
+                      <span 
+                        key={index} 
+                        className="px-2 py-1 bg-purple-100 text-purple-800 text-xs rounded-full"
+                      >
+                        {label}
+                      </span>
+                    ))
+                  }
                 </div>
-                <p className="text-gray-700">{contribution.excerpt}</p>
+                
+                <div className="text-sm text-gray-500 mb-3 flex items-center">
+                  <span className="flex items-center">{new Date(contribution.date).toLocaleDateString('ko-KR')}</span> 
+                  {/* GitHub 유저 이름 형식인지 확인 */}
+                  {contribution.author && !/\s/.test(contribution.author) && /^[a-zA-Z0-9-]+$/.test(contribution.author) ? (
+                    <span className="flex items-center ml-2">
+                      <Image 
+                        src={`https://github.com/${contribution.author}.png?size=18`} 
+                        alt={`${contribution.author} 프로필 이미지`}
+                        width={18}
+                        height={18}
+                        className="rounded-full mr-1"
+                      />
+                      <span className="inline-block align-middle">{contribution.author}</span>
+                    </span>
+                  ) : (
+                    <span className="ml-2 flex items-center">{contribution.author}</span>
+                  )}
+                </div>
+                
+                <p className="text-black mb-4 flex-grow">{contribution.excerpt}</p>
+                
+                <div className="text-[#5893f4] text-sm font-medium mt-auto">
+                  더 읽기 →
+                </div>
               </Link>
             ))}
           </div>
         ) : (
-          <p className="text-gray-600">아직 등록된 컨트리뷰션이 없습니다.</p>
+          <p className="text-black">아직 등록된 컨트리뷰션이 없습니다.</p>
         )}
         <div className="mt-6">
           <Link 
             href="/contributions" 
-            className="text-blue-600 hover:underline font-medium"
+            className="text-[#5893f4] hover:underline font-medium inline-flex items-center"
           >
-            See all contributions →
+            모든 컨트리뷰션 보기
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
           </Link>
         </div>
       </section>
 
-      <section className="mb-12">
-        <h2 className="text-2xl font-bold mb-6">유용한 링크</h2>
+      <section className="mb-9">
+        <h2 className="text-2xl font-bold mb-5 text-black">유용한 링크</h2>
         <div className="grid md:grid-cols-2 gap-4">
           <a
             href="https://www.chromium.org/chromium-projects/"
-            className="p-4 border rounded hover:bg-gray-50 transition-colors"
+            className="p-4 border border-gray-200 rounded hover:bg-gray-50 transition-colors text-black"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -51,7 +106,7 @@ export default function Home() {
           </a>
           <a
             href="https://chromium.googlesource.com/chromium/src/+/main/docs"
-            className="p-4 border rounded hover:bg-gray-50 transition-colors"
+            className="p-4 border border-gray-200 rounded hover:bg-gray-50 transition-colors text-black"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -59,7 +114,7 @@ export default function Home() {
           </a>
           <a
             href="https://chromium.googlesource.com/chromium/src/+/main/docs/contributing.md"
-            className="p-4 border rounded hover:bg-gray-50 transition-colors"
+            className="p-4 border border-gray-200 rounded hover:bg-gray-50 transition-colors text-black"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -67,7 +122,7 @@ export default function Home() {
           </a>
           <a
             href="https://issues.chromium.org/u/1/issues"
-            className="p-4 border rounded hover:bg-gray-50 transition-colors"
+            className="p-4 border border-gray-200 rounded hover:bg-gray-50 transition-colors text-black"
             target="_blank"
             rel="noopener noreferrer"
           >
