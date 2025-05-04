@@ -54,123 +54,123 @@ export function markdownToHtml(markdown: string): string {
       .replace(/^##### (.+)$/gm, '<h5 class="text-base font-semibold mt-3 mb-1">$1</h5>')
       .replace(/^###### (.+)$/gm, '<h6 class="text-base font-semibold mt-3 mb-1">$1</h6>');
 
-    // 목록 처리
-    const listRegex = /^(\s*)([-*+]|\d+\.)\s+(.+)$/gm;
+    // 목록 처리 (들여쓰기 깊이 처리 추가)
     const lines = html.split('\n');
+    let result = [];
     let inList = false;
     let listType = '';
-    let currentIndent = 0;
-    let indentStack: { indent: number, type: string }[] = [];
-    let result = [];
-
+    let listStack: { type: string; indent: number }[] = [];
+    
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
-      const listMatch = line.match(listRegex);
-
+      
+      // 목록 항목 매칭 (들여쓰기 레벨 포함)
+      const listMatch = line.match(/^(\s*)([*+-]|\d+\.)\s+(.+)$/);
+      
       if (listMatch) {
-        // listMatch 그룹이 모두 존재하는지 확인
-        if (!listMatch[1] || !listMatch[2] || !listMatch[3]) {
-          result.push(line);
-          continue;
+        const indent = listMatch[1].length;
+        const marker = listMatch[2];
+        const content = listMatch[3];
+        const isOrdered = /^\d+\./.test(marker);
+        const currentListType = isOrdered ? 'ol' : 'ul';
+        
+        if (!inList) {
+          // 첫 번째 목록 시작
+          inList = true;
+          listType = currentListType;
+          listStack.push({ type: listType, indent: indent });
+          result.push(`<${listType} class="${listType === 'ul' ? 'list-disc' : 'list-decimal'} pl-8 my-4">`);
+        } else {
+          // 현재 활성화된 목록 스택의 마지막 항목 확인
+          const currentList = listStack[listStack.length - 1];
+          
+          if (indent > currentList.indent) {
+            // 들여쓰기가 증가: 새로운 중첩 목록 시작
+            listType = currentListType;
+            listStack.push({ type: listType, indent: indent });
+            result.push(`<${listType} class="${listType === 'ul' ? 'list-disc' : 'list-decimal'} pl-6">`);
+          } else if (indent < currentList.indent) {
+            // 들여쓰기가 감소: 중첩 목록 종료
+            while (listStack.length > 0 && indent < listStack[listStack.length - 1].indent) {
+              const poppedList = listStack.pop();
+              if (poppedList) {
+                result.push(`</${poppedList.type}>`);
+              }
+            }
+            
+            // 목록 유형이 변경된 경우
+            if (listStack.length > 0 && listStack[listStack.length - 1].type !== currentListType) {
+              const poppedList = listStack.pop();
+              if (poppedList) {
+                result.push(`</${poppedList.type}>`);
+              }
+              listType = currentListType;
+              listStack.push({ type: listType, indent: indent });
+              result.push(`<${listType} class="${listType === 'ul' ? 'list-disc' : 'list-decimal'} pl-8 my-4">`);
+            }
+          } else if (currentList.type !== currentListType) {
+            // 같은 들여쓰기 레벨이지만 목록 유형이 변경된 경우
+            result.push(`</${currentList.type}>`);
+            listStack.pop();
+            listType = currentListType;
+            listStack.push({ type: listType, indent: indent });
+            result.push(`<${listType} class="${listType === 'ul' ? 'list-disc' : 'list-decimal'} pl-8 my-4">`);
+          }
         }
         
-        const indent = listMatch[1].length;
-        const listMarker = listMatch[2];
-        const content = listMatch[3];
-        const isOrdered = /^\d+\./.test(listMarker);
-        const newListType = isOrdered ? 'ol' : 'ul';
-
-        if (!inList) {
-          // 새로운 목록 시작
-          inList = true;
-          listType = newListType;
-          currentIndent = indent;
-          indentStack.push({ indent, type: listType });
-          result.push(`<${listType} class="${listType === 'ul' ? 'list-disc' : 'list-decimal'} pl-6 my-4 space-y-2">`);
-        } else if (indent > currentIndent) {
-          // 들여쓰기 수준이 증가했을 때 - 중첩 목록 시작
-          result.push(`<${newListType} class="${newListType === 'ul' ? 'list-disc' : 'list-decimal'} pl-4 mt-2 mb-2 space-y-1">`);
-          indentStack.push({ indent, type: newListType });
-          listType = newListType;
-          currentIndent = indent;
-        } else if (indent < currentIndent) {
-          // 들여쓰기 수준이 감소했을 때 - 상위 목록으로 복귀
-          while (indentStack.length > 0 && indent < indentStack[indentStack.length - 1].indent) {
-            const lastItem = indentStack.pop();
-            if (lastItem) {
-              result.push(`</${lastItem.type}>`);
-            }
-          }
-          
-          // 현재 들여쓰기 수준의 목록 유형을 업데이트
-          if (indentStack.length > 0) {
-            listType = indentStack[indentStack.length - 1].type;
-            currentIndent = indentStack[indentStack.length - 1].indent;
-          } else {
-            // 모든 목록 종료 후 새 목록 시작
-            listType = newListType;
-            currentIndent = indent;
-            indentStack.push({ indent, type: listType });
-            result.push(`<${listType} class="${listType === 'ul' ? 'list-disc' : 'list-decimal'} pl-6 my-4 space-y-2">`);
-          }
-          
-          // 목록 유형이 변경된 경우 처리
-          if (listType !== newListType && indent === currentIndent) {
-            result.push(`</${listType}>`);
-            listType = newListType;
-            indentStack[indentStack.length - 1].type = listType;
-            result.push(`<${listType} class="${listType === 'ul' ? 'list-disc' : 'list-decimal'} pl-6 my-4 space-y-2">`);
-          }
-        } else if (listType !== newListType) {
-          // 같은 들여쓰기 수준에서 목록 유형이 변경되는 경우
-          result.push(`</${listType}>`);
-          listType = newListType;
-          indentStack[indentStack.length - 1].type = listType;
-          result.push(`<${listType} class="${listType === 'ul' ? 'list-disc' : 'list-decimal'} pl-6 my-4 space-y-2">`);
-        }
-
         result.push(`<li>${content}</li>`);
       } else if (inList && line.trim() === '') {
         // 빈 줄을 만나면 모든 목록 종료
-        while (indentStack.length > 0) {
-          const lastItem = indentStack.pop();
-          if (lastItem) {
-            result.push(`</${lastItem.type}>`);
+        while (listStack.length > 0) {
+          const poppedList = listStack.pop();
+          if (poppedList) {
+            result.push(`</${poppedList.type}>`);
           }
         }
         inList = false;
-        currentIndent = 0;
         result.push('');
       } else {
         // 목록이 아니면서 목록 내부에 있었다면, 목록 종료
         if (inList) {
-          while (indentStack.length > 0) {
-            const lastItem = indentStack.pop();
-            if (lastItem) {
-              result.push(`</${lastItem.type}>`);
+          while (listStack.length > 0) {
+            const poppedList = listStack.pop();
+            if (poppedList) {
+              result.push(`</${poppedList.type}>`);
             }
           }
           inList = false;
-          currentIndent = 0;
         }
         result.push(line);
       }
     }
-
+    
     // 닫히지 않은 목록 태그 닫기
-    while (indentStack.length > 0) {
-      const lastItem = indentStack.pop();
-      if (lastItem) {
-        result.push(`</${lastItem.type}>`);
+    while (listStack.length > 0) {
+      const poppedList = listStack.pop();
+      if (poppedList) {
+        result.push(`</${poppedList.type}>`);
       }
     }
-
+    
     html = result.join('\n');
     
     // 인라인 코드 처리
     html = html.replace(/`([^`]+)`/g, '<code class="bg-gray-100 px-1 py-0.5 rounded text-red-600">$1</code>');
     
-    // 링크 처리
+    // URL 스키마가 있는 텍스트를 자동으로 링크로 변환 (마크다운 링크 외의 URL에 대한 처리)
+    html = html.replace(/(?:^|\s|-\s+)(https?:\/\/[^\s<]+)/g, 
+      (match, url, offset, string) => {
+        // 이미 링크 내부에 있는 URL은 변환하지 않음
+        const prevContent = string.substring(0, offset);
+        if (prevContent.lastIndexOf('<a') > prevContent.lastIndexOf('</a>')) {
+          return match;
+        }
+        // 목록 항목 내의 URL 링크로 변환
+        return match.replace(url, `<a href="${url}" class="text-[#5893f4] hover:underline" target="_blank" rel="noopener noreferrer">${url}</a>`);
+      }
+    );
+    
+    // 기존 마크다운 링크 처리
     html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, 
       '<a href="$2" class="text-[#5893f4] hover:underline" target="_blank" rel="noopener noreferrer">$1</a>');
     

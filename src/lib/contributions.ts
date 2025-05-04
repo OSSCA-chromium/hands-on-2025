@@ -30,30 +30,19 @@ try {
 // 모든 컨트리뷰션 데이터 가져오기
 export function getAllContributions(): Contribution[] {
   try {
-    // 디렉토리가 없으면 빈 배열 반환
     if (!fs.existsSync(contributionsDirectory)) {
       return [];
     }
 
     const fileNames = fs.readdirSync(contributionsDirectory);
-
-    if (!fileNames.length) {
-      return [];
-    }
-
+    
+    // template.md 파일은 제외
     const contributions = fileNames
-      .filter(fileName => fileName.endsWith('.md'))
+      .filter(fileName => fileName.endsWith('.md') && fileName !== 'template.md')
       .map(fileName => {
-        // 파일 이름에서 .md 확장자 제거
         const slug = fileName.replace(/\.md$/, '');
-
-        // 마크다운 파일의 전체 경로
         const fullPath = path.join(contributionsDirectory, fileName);
-
-        // 파일 내용 읽기
         const fileContents = fs.readFileSync(fullPath, 'utf8');
-
-        // gray-matter로 마크다운의 메타데이터와 내용을 파싱
         const matterResult = matter(fileContents);
 
         // 첫 두 문단 정도를 발췌문으로 사용
@@ -232,7 +221,7 @@ export function getAllContributionSlugs(): { slug: string }[] {
     const fileNames = fs.readdirSync(contributionsDirectory);
 
     return fileNames
-      .filter(fileName => fileName.endsWith('.md'))
+      .filter(fileName => fileName.endsWith('.md') && fileName !== 'template.md')
       .map(fileName => {
         return {
           slug: fileName.replace(/\.md$/, '')
