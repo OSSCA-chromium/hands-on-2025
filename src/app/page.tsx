@@ -1,10 +1,12 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { getAllContributions } from '@/lib/contributions';
+import { getAllContributions, getUniqueContributors, isValidGithubUsername } from '@/lib/contributions';
 
 export default function Home() {
   // 최근 컨트리뷰션 3개만 가져오기
-  const contributions = getAllContributions().slice(0, 3)
+  const contributions = getAllContributions().slice(0, 3);
+  // 고유한 기여자 목록 가져오기
+  const contributors = getUniqueContributors();
 
   return (
     <>
@@ -53,7 +55,7 @@ export default function Home() {
                 <div className="text-sm text-gray-500 mb-3 flex items-center">
                   <span className="flex items-center">{new Date(contribution.date).toLocaleDateString('ko-KR')}</span> 
                   {/* GitHub 유저 이름 형식인지 확인 */}
-                  {contribution.author && !/\s/.test(contribution.author) && /^[a-zA-Z0-9-]+$/.test(contribution.author) ? (
+                  {isValidGithubUsername(contribution.author) ? (
                     <span className="flex items-center ml-2">
                       <Image 
                         src={`https://github.com/${contribution.author}.png?size=18`} 
@@ -94,41 +96,41 @@ export default function Home() {
       </section>
 
       <section className="mb-9">
-        <h2 className="text-2xl font-bold mb-5 text-black">유용한 링크</h2>
-        <div className="grid md:grid-cols-2 gap-4">
-          <a
-            href="https://www.chromium.org/chromium-projects/"
-            className="p-4 border border-gray-200 rounded hover:bg-gray-50 transition-colors text-black"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Chromium Projects
-          </a>
-          <a
-            href="https://chromium.googlesource.com/chromium/src/+/main/docs"
-            className="p-4 border border-gray-200 rounded hover:bg-gray-50 transition-colors text-black"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Chromium Docs
-          </a>
-          <a
-            href="https://chromium.googlesource.com/chromium/src/+/main/docs/contributing.md"
-            className="p-4 border border-gray-200 rounded hover:bg-gray-50 transition-colors text-black"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Chromium Contribution Guide
-          </a>
-          <a
-            href="https://issues.chromium.org/u/1/issues"
-            className="p-4 border border-gray-200 rounded hover:bg-gray-50 transition-colors text-black"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Chromium Issue Tracker
-          </a>
-        </div>
+        <h2 className="text-2xl font-bold mb-5 text-black">Contributors</h2>
+        {contributors.length > 0 ? (
+          <div className="flex flex-wrap gap-[18px]">
+            {contributors.map((contributor, index) => (
+              <div key={index} className="flex flex-col items-center">
+                {contributor.isValidGithubUser ? (
+                  <a 
+                    href={`https://github.com/${contributor.username}`}
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="flex flex-col items-center hover:opacity-80 transition-opacity"
+                  >
+                    <Image 
+                      src={`https://github.com/${contributor.username}.png?size=64`}
+                      alt={`${contributor.username} 프로필 이미지`}
+                      width={64}
+                      height={64}
+                      className="rounded-full"
+                    />
+                  </a>
+                ) : (
+                  <div className="flex flex-col items-center">
+                    <div className="w-16 h-16 rounded-full bg-[#5893f4] flex items-center justify-center">
+                      <span className="text-white font-bold text-lg">
+                        {contributor.username.charAt(0).toUpperCase()}
+                      </span>
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        ) : (
+          <p className="text-black">등록된 컨트리뷰터가 없습니다.</p>
+        )}
       </section>
     </>
   );

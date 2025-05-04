@@ -248,4 +248,27 @@ export function getAllContributionSlugs(): { slug: string }[] {
     console.error('Error getting contribution slugs:', error);
     return [];
   }
+}
+
+// 유효한 GitHub 사용자 이름인지 확인하는 함수
+export function isValidGithubUsername(username: string): boolean {
+  return Boolean(username && !/\s/.test(username) && /^[a-zA-Z0-9-]+$/.test(username));
+}
+
+// 고유한 컨트리뷰터 목록 가져오기
+export function getUniqueContributors(): { username: string; isValidGithubUser: boolean }[] {
+  const contributions = getAllContributions();
+  const contributors = new Map<string, boolean>();
+  
+  contributions.forEach(contribution => {
+    if (contribution.author) {
+      const isValidUser = isValidGithubUsername(contribution.author);
+      contributors.set(contribution.author, isValidUser);
+    }
+  });
+  
+  return Array.from(contributors.entries()).map(([username, isValidGithubUser]) => ({
+    username,
+    isValidGithubUser
+  }));
 } 

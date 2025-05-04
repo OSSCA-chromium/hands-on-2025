@@ -5,6 +5,8 @@ import * as contributionsModule from '@/lib/contributions';
 // contributions 모듈 모킹
 jest.mock('@/lib/contributions', () => ({
   getAllContributions: jest.fn(),
+  getUniqueContributors: jest.fn().mockReturnValue([]),
+  isValidGithubUsername: jest.fn()
 }));
 
 describe('홈페이지', () => {
@@ -15,6 +17,7 @@ describe('홈페이지', () => {
   it('타이틀과 소개 문구가 렌더링됩니다', () => {
     // 빈 배열 반환하도록 모의 설정
     (contributionsModule.getAllContributions as jest.Mock).mockReturnValue([]);
+    (contributionsModule.getUniqueContributors as jest.Mock).mockReturnValue([]);
 
     render(<HomePage />);
 
@@ -25,6 +28,7 @@ describe('홈페이지', () => {
 
   it('최근 컨트리뷰션 섹션이 있습니다', () => {
     (contributionsModule.getAllContributions as jest.Mock).mockReturnValue([]);
+    (contributionsModule.getUniqueContributors as jest.Mock).mockReturnValue([]);
 
     render(<HomePage />);
 
@@ -52,6 +56,7 @@ describe('홈페이지', () => {
     ];
 
     (contributionsModule.getAllContributions as jest.Mock).mockReturnValue(mockContributions);
+    (contributionsModule.getUniqueContributors as jest.Mock).mockReturnValue([]);
 
     render(<HomePage />);
 
@@ -59,13 +64,13 @@ describe('홈페이지', () => {
     expect(screen.getByText('테스트 컨트리뷰션 2')).toBeInTheDocument();
   });
 
-  it('유용한 링크 섹션이 있습니다', () => {
+  it('Contributors 섹션이 있습니다', () => {
     (contributionsModule.getAllContributions as jest.Mock).mockReturnValue([]);
+    (contributionsModule.getUniqueContributors as jest.Mock).mockReturnValue([]);
 
     render(<HomePage />);
 
-    expect(screen.getByText('유용한 링크')).toBeInTheDocument();
-    expect(screen.getByText('Chromium Projects')).toBeInTheDocument();
-    expect(screen.getByText('Chromium Docs')).toBeInTheDocument();
+    expect(screen.getByText('Contributors')).toBeInTheDocument();
+    expect(screen.getByText('등록된 컨트리뷰터가 없습니다.')).toBeInTheDocument();
   });
 }); 
