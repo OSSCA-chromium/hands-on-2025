@@ -1,0 +1,65 @@
+1:"$Sreact.fragment"
+2:I[6874,["874","static/chunks/874-992333f59fd2c78c.js","63","static/chunks/63-c2c959fcaf31c215.js","90","static/chunks/app/contributions/%5Bslug%5D/page-8c46eb3b3c2d3273.js"],""]
+3:I[3063,["874","static/chunks/874-992333f59fd2c78c.js","63","static/chunks/63-c2c959fcaf31c215.js","90","static/chunks/app/contributions/%5Bslug%5D/page-8c46eb3b3c2d3273.js"],"Image"]
+4:I[7555,[],""]
+5:I[1295,[],""]
+7:I[9665,[],"MetadataBoundary"]
+9:I[9665,[],"OutletBoundary"]
+c:I[4911,[],"AsyncMetadataOutlet"]
+e:I[9665,[],"ViewportBoundary"]
+10:I[6614,[],""]
+:HL["/hands-on-2025/_next/static/media/a34f9d1faa5f3315-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/hands-on-2025/_next/static/css/30c9d267462360ff.css","style"]
+:HL["/hands-on-2025/_next/static/css/7f6bd37aab40623f.css","style"]
+0:{"P":null,"b":"KpvMG-Qgtx28xFtG95B6N","p":"/hands-on-2025","c":["","contributions","6507951",""],"i":false,"f":[[["",{"children":["contributions",{"children":[["slug","6507951","d"],{"children":["__PAGE__",{}]}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/hands-on-2025/_next/static/css/30c9d267462360ff.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","className":"bg-gray-100","children":["$","body",null,{"className":"__className_9cfde6 bg-gray-100 text-black","children":[["$","header",null,{"className":"bg-[#4285F4] text-white py-4 shadow-md","children":["$","div",null,{"className":"container mx-auto px-4","children":["$","nav",null,{"className":"flex flex-col md:flex-row justify-between items-center","children":[["$","$L2",null,{"href":"/","className":"text-2xl font-bold mb-2 md:mb-0 flex items-center","children":[["$","$L3",null,{"src":{"src":"/hands-on-2025/_next/static/media/logo.bc31a3bb.png","height":954,"width":1394,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAMAAABPT11nAAAATlBMVEVgW12ZwfmTufYda1waIhtLir4YYIoBMyh+fHwAJR0AZVE1SEAEemMjQzwALR6xz/ggdOERWJAlet2QtvUpgOoUVUieyP9zrv8tPjus0v/5iGvfAAAAFXRSTlP9wdv9/vvvzP79NfM22uvu1f42Nf52eNs9AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAM0lEQVR4nAXBBwKAMAgEsOsEtFtB+/+PNkEhafkdC6RBJZmDgBGndRCYY9oOV/3v/PnnACYvAbECXypkAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":5},"alt":"OSSCA Chromium 로고","width":32,"height":32,"className":"mr-2"}],"OSSCA Chromium"]}],["$","div",null,{"className":"flex gap-6","children":[["$","$L2",null,{"href":"/guide","className":"hover:text-gray-200","children":"Guide"}],["$","$L2",null,{"href":"/contributions","className":"hover:text-gray-200","children":"Contributions"}]]}]]}]}]}],["$","main",null,{"className":"container mx-auto px-4 py-8","children":["$","div",null,{"className":"bg-white rounded-lg p-6","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"flex flex-col items-center justify-center py-20","children":[["$","h1",null,{"className":"text-4xl font-bold mb-4","children":"404"}],["$","h2",null,{"className":"text-2xl mb-6","children":"페이지를 찾을 수 없습니다"}],["$","p",null,{"className":"mb-8 text-gray-600","children":"요청하신 페이지가 존재하지 않거나 이동되었을 수 있습니다."}],["$","$L2",null,{"href":"/","className":"px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors","children":"홈으로 돌아가기"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}],["$","footer",null,{"className":"bg-gray-100 text-gray-600 py-4 mt-6","children":["$","div",null,{"className":"container mx-auto px-4 text-center","children":["$","p",null,{"children":["© ",2025," OSSCA Chromium. All rights reserved."]}]}]}]]}]}]]}],{"children":["contributions",["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":[["slug","6507951","d"],["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L6",["$","$L7",null,{"children":"$L8"}],[["$","link","0",{"rel":"stylesheet","href":"/hands-on-2025/_next/static/css/7f6bd37aab40623f.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$L9",null,{"children":["$La","$Lb",["$","$Lc",null,{"promise":"$@d"}]]}]]}],{},null,false]},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","HzjjyxGJDVx-q0NStrX2y",{"children":[["$","$Le",null,{"children":"$Lf"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$10","$undefined"],"s":false,"S":true}
+11:"$Sreact.suspense"
+12:I[4911,[],"AsyncMetadata"]
+8:["$","$11",null,{"fallback":null,"children":["$","$L12",null,{"promise":"$@13"}]}]
+b:null
+14:Tb1e,<p class="my-4">linux sandboxing 문서 링크 깨짐 오류 수정.</p>
+
+<h2 class="text-2xl font-semibold mt-6 mb-3">문제 설명</h2>
+
+<p class="my-4">/docs/linux/sandboxing.md 파일이 삭제됨.</p>
+
+<h2 class="text-2xl font-semibold mt-6 mb-3">해결 내용</h2>
+<a href="https://crrev.com/c/5597924" class="text-[#5893f4] hover:underline" target="_blank" rel="noopener noreferrer">https://crrev.com/c/5597924</a>
+위 커밋에서 파일이 삭제되고, /sandbox/linux/README.md가 새로 만들어짐.
+
+<a href="https://crrev.com/c/5828699" class="text-[#5893f4] hover:underline" target="_blank" rel="noopener noreferrer">https://crrev.com/c/5828699</a>
+여기에서 /docs/linux/sandboxing.md 파일 링크를 변경한 히스토리 발견.
+
+<code class="bg-gray-100 px-1 py-0.5 rounded text-red-600">docs/README.md</code>
+
+<p class="my-4">변경 전
+<pre class="bg-gray-800 rounded-md my-4 overflow-x-auto"><code class="hljs p-4 block"><span class="hljs-bullet">*</span>   <a href="<span class="hljs-link">linux/sandboxing.md</span>" class="text-[#5893f4] hover:underline" target="_blank" rel="noopener noreferrer"><span class="hljs-string">Linux Sandboxing</span></a> - The Linux multi-process model to</code></pre>
+변경 후
+``<code class="bg-gray-100 px-1 py-0.5 rounded text-red-600"> md
+<ul class="list-disc pl-8 my-4">
+<li><a href="../sandbox/linux/README.md" class="text-[#5893f4] hover:underline" target="_blank" rel="noopener noreferrer">Linux Sandboxing</a> - The Linux multi-process model to</li>
+</ul>
+<pre class="bg-gray-800 rounded-md my-4 overflow-x-auto"><code class="hljs p-4 block"></p>
+
+</code>docs/design/sandbox.md<code class="bg-gray-100 px-1 py-0.5 rounded text-red-600">
+
+<p class="my-4">변경 전</code></pre>md
+described <a href="../../linux/sandbox/linux/README.md" class="text-[#5893f4] hover:underline" target="_blank" rel="noopener noreferrer">here</a>, the OSX implementation
+<pre class="bg-gray-800 rounded-md my-4 overflow-x-auto"><code class="hljs p-4 block">변경 후</code></pre> md
+described <a href="../../sandbox/linux/README.md" class="text-[#5893f4] hover:underline" target="_blank" rel="noopener noreferrer">here</a>, the OSX implementation
+</code>``</p>
+
+<h2 class="text-2xl font-semibold mt-6 mb-3">테스트 방법</h2>
+
+<p class="my-4">--</p>
+
+<h2 class="text-2xl font-semibold mt-6 mb-3">배운 점</h2>
+
+<p class="my-4">gerrit과 code search를 이용해서 히스토리를 탐색하는 방법을 배웠습니다.</p>
+
+<h2 class="text-2xl font-semibold mt-6 mb-3">참고 자료</h2>
+<a href="https://crrev.com/c/5828699" class="text-[#5893f4] hover:underline" target="_blank" rel="noopener noreferrer">https://crrev.com/c/5828699</a>
+<a href="https://crrev.com/c/5597924" class="text-[#5893f4] hover:underline" target="_blank" rel="noopener noreferrer">https://crrev.com/c/5597924</a>6:["$","article",null,{"className":"max-w-4xl mx-auto p-4","children":[["$","header",null,{"className":"mb-4","children":[["$","h1",null,{"className":"text-4xl font-bold mb-2 text-black","children":"Fix broken links abouts linux sandboxing"}],["$","div",null,{"className":"flex flex-wrap gap-2 mb-2","children":[["$","span",null,{"className":"px-3 py-1 text-sm text-white rounded-full font-medium bg-blue-600","children":"IN REVIEW"}],[["$","span","0",{"className":"px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full","children":"docs"}],["$","span","1",{"className":"px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full","children":"linux sandbox"}]]]}],["$","div",null,{"className":"flex items-center text-gray-500 mb-4","children":[["$","span",null,{"className":"mr-2","children":"2025. 5. 4."}],["$","span",null,{"className":"flex items-center","children":["$","a",null,{"href":"https://github.com/yoon6","target":"_blank","rel":"noopener noreferrer","className":"flex items-center hover:text-blue-600","children":[["$","$L3",null,{"src":"https://github.com/yoon6.png?size=24","alt":"yoon6 프로필 이미지","width":24,"height":24,"className":"rounded-full mr-2"}],"yoon6"]}]}]]}]]}],["$","div",null,{"className":"mb-4","children":["$","a",null,{"href":"https://crrev.com/c/6507951","target":"_blank","rel":"noopener noreferrer","className":"inline-flex items-center text-[#5893f4] hover:underline","children":["https://crrev.com/c/6507951",["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","className":"h-4 w-4 ml-1","fill":"none","viewBox":"0 0 24 24","stroke":"currentColor","children":["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","strokeWidth":2,"d":"M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"}]}]]}]}],["$","main",null,{"className":"markdown-content text-black","dangerouslySetInnerHTML":{"__html":"$14"}}],["$","div",null,{"className":"border-t pt-6 mt-8","children":["$","$L2",null,{"href":"/contributions","className":"inline-flex items-center text-[#5893f4] hover:underline","children":[["$","svg",null,{"xmlns":"http://www.w3.org/2000/svg","className":"h-4 w-4 mr-1","fill":"none","viewBox":"0 0 24 24","stroke":"currentColor","children":["$","path",null,{"strokeLinecap":"round","strokeLinejoin":"round","strokeWidth":2,"d":"M10 19l-7-7m0 0l7-7m-7 7h18"}]}],"모든 컨트리뷰션 보기"]}]}]]}]
+f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+a:null
+13:{"metadata":[["$","title","0",{"children":"Fix broken links abouts linux sandboxing | OSSCA Chromium"}],["$","meta","1",{"name":"description","content":"linux sandboxing 문서 링크 깨짐 오류 수정...."}],["$","link","2",{"rel":"icon","href":"/hands-on-2025/favicon.ico","type":"image/x-icon","sizes":"1394x954"}]],"error":null,"digest":"$undefined"}
+d:{"metadata":"$13:metadata","error":null,"digest":"$undefined"}
