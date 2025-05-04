@@ -8,7 +8,7 @@ https://ossca-chromium.github.io/hands-on-2025/
 
 ## 3주차 실습용 이슈
 
-- https://github.com/OSSCA-chromium/hands-on-2025/milestone/2
+https://github.com/OSSCA-chromium/hands-on-2025/milestone/2
 
 ## CONTRIBUTION GUIDE
 
