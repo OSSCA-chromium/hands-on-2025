@@ -59,6 +59,27 @@ $ git push origin 250420-test
 - [ ] 수정한 파일과 AUTHORS 파일 포함해서 commit 만들기 -> commit 메시지 GitHub에 댓글로 달아서 멘토 확인받기
 - [ ] 업로드 후 해당 패치을 리뷰해줄 적절한 리뷰어 찾기 -> GitHub 댓글로 먼저 멘토에게 확인받기
 
+### commit message rule
+```
+Summary of change (one line)
+
+Longer description of change addressing as appropriate: why the change
+is made, context if it is part of many changes, description of previous
+behavior and newly introduced differences, etc.
+
+Long lines should be wrapped to 72 columns for easier log message
+viewing in terminals.
+
+Bug: 123456
+```
+- 제목 다음에 빈 줄을 넣지 않으면 git log --oneline 등 한줄 이력을 볼 때 뒤에 내용이 다 붙는다. 
+- 제목에 `fix:` `feat:` `chore:` 와 같은 Semantic Commit Message 룰은 쓰지 않음
+- 대신 `모듈 이름` 또는 `기능 이름`을 앞에 붙이는 경우가 있음
+- `css: Fix something` 또는 `[CSS] Fix something` 또는 `Fix something`
+- 앞에 `이름:` 를 붙이면 Gerrit 에서 `이름`이 태그로 추가 됨 
+- 문장 첫 단어는 동사(현재형), 첫 글자는 대문자로 시작, 뒤에는 마침표 없이
+- Add, Fix, Implement 등등
+
 ### 패치 Gerrit 업로드 후 진행
 1. `data/contributions/template.md` 파일을 `data/contribtutions/{ChromiumReviewId}.md` 파일로 복사합니다. 
 2. 내용을 채우고 GitHub Pull Request 로 올려주세요. 
