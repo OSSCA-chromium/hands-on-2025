@@ -74,7 +74,7 @@ authorGithub: "GitHub_사용자명"
 - [관련 코드 리뷰](코드 리뷰 링크)
 ```
 
-## GitHub Pages
+## 웹사이트 실행 및 확인
 
 1. Install
 
@@ -82,11 +82,11 @@ authorGithub: "GitHub_사용자명"
 npm install
 ```
 
-2. Run Server
+2. Run Dev Server
 
 ```bash
 npm run dev
-# localhost:3000/hands-on-2025 접속
+# 웹브라우저에서 localhost:3000/hands-on-2025 접속
 ```
 
 3. Lint
