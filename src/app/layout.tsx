@@ -29,11 +29,8 @@ export default function RootLayout({
                 OSSCA Chromium
               </Link>
               <div className="flex gap-6">
-                <Link href="/getting-started" className="hover:text-gray-200">
-                  시작하기
-                </Link>
-                <Link href="/contributing" className="hover:text-gray-200">
-                  컨트리뷰션 가이드
+                <Link href="/guide" className="hover:text-gray-200">
+                  Guide
                 </Link>
                 <Link href="/contributions" className="hover:text-gray-200">
                   Contributions

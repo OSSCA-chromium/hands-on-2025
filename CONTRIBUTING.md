@@ -91,8 +91,6 @@ title: "컨트리뷰션 제목"
 date: "2025-XX-XX"
 author: "작성자 이름"
 authorGithub: "GitHub_사용자명"
-difficulty: "난이도 (beginner, intermediate, advanced)"
-category: "카테고리 (예: Accessibility, Performance, Security)"
 ---
 
 ## 개요

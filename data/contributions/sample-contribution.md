@@ -3,8 +3,6 @@ title: 크로미움 오류 수정 컨트리뷰션
 date: 2025-05-11
 author: 홍길동
 contribution_url: https://chromium-review.googlesource.com/c/chromium/src/+/12345
-difficulty: 중간
-category: 버그 수정
 labels: ["memory", "WebRTC", "performance"]
 status: merged
 ---

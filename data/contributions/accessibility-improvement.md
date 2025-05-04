@@ -3,8 +3,6 @@ title: 크로미움 접근성 개선
 date: 2025-03-15
 author: jane-doe
 contribution_url: https://chromium-review.googlesource.com/c/chromium/src/+/98765
-difficulty: 쉬움
-category: 접근성
 labels: ["a11y", "screen-reader", "UI"]
 status: in review
 ---

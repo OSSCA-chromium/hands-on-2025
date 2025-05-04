@@ -11,8 +11,7 @@ describe('레이아웃 컴포넌트', () => {
           <nav>
             <a href="/">Chromium 컨트리뷰션 가이드</a>
             <div>
-              <a href="/getting-started">시작하기</a>
-              <a href="/contributing">컨트리뷰션 가이드</a>
+              <a href="/guide">Guide</a>
               <a href="/contributions">학생 컨트리뷰션</a>
             </div>
           </nav>
@@ -30,8 +29,7 @@ describe('레이아웃 컴포넌트', () => {
     expect(screen.getByText('Chromium 컨트리뷰션 가이드')).toBeInTheDocument();
     
     // 네비게이션 링크 검증
-    expect(screen.getByText('시작하기')).toBeInTheDocument();
-    expect(screen.getByText('컨트리뷰션 가이드')).toBeInTheDocument();
+    expect(screen.getByText('Guide')).toBeInTheDocument();
     expect(screen.getByText('학생 컨트리뷰션')).toBeInTheDocument();
     
     // 콘텐츠 영역 검증

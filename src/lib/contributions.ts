@@ -10,8 +10,6 @@ export interface Contribution {
   title: string;
   date: string;
   author: string;
-  difficulty?: string;
-  category?: string;
   contributionUrl?: string;
   labels?: string[];
   status?: 'in review' | 'merged' | 'draft';
@@ -72,8 +70,6 @@ export function getAllContributions(): Contribution[] {
           title: matterResult.data.title || '제목 없음',
           date: matterResult.data.date || new Date().toISOString(),
           author: matterResult.data.author || '익명',
-          difficulty: matterResult.data.difficulty || '',
-          category: matterResult.data.category || '',
           contributionUrl: matterResult.data.contribution_url || '',
           labels: Array.isArray(matterResult.data.labels) ? matterResult.data.labels : 
                  (matterResult.data.labels ? [matterResult.data.labels] : []),
@@ -212,8 +208,6 @@ export async function getContributionBySlug(slug: string): Promise<Contribution 
       title: matterResult.data.title || '제목 없음',
       date: matterResult.data.date || new Date().toISOString(),
       author: matterResult.data.author || '익명',
-      difficulty: matterResult.data.difficulty || '',
-      category: matterResult.data.category || '',
       contributionUrl: matterResult.data.contribution_url || '',
       labels: Array.isArray(matterResult.data.labels) ? matterResult.data.labels : 
              (matterResult.data.labels ? [matterResult.data.labels] : []),

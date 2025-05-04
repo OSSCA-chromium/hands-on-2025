@@ -143,8 +143,6 @@ async function getContributionDirect(slug: string) {
       title: matterResult.data.title || '제목 없음',
       date: matterResult.data.date || new Date().toISOString(),
       author: matterResult.data.author || '익명',
-      difficulty: matterResult.data.difficulty || '',
-      category: matterResult.data.category || '',
       contributionUrl: matterResult.data.contribution_url || '',
       labels: Array.isArray(matterResult.data.labels) ? matterResult.data.labels : 
              (matterResult.data.labels ? [matterResult.data.labels] : []),
