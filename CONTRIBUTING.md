@@ -37,42 +37,14 @@ $ git push origin 250420-test
 ### 이슈 생성 또는 기존 이슈 선택하기
 
 - 새로운 컨트리뷰션을 시작하기 전에 먼저 [이슈 페이지](https://github.com/OSSCA-chromium/hands-on-2025/issues)를 확인해 주세요.
+- 새로운 기능이나 버그 수정을 제안하고 싶다면 새 이슈를 생성해 주세요. 적절한 이슈 템플릿을 골라 작성하세요.
 - 기존 이슈 중 작업하고 싶은 것이 있다면 댓글을 남겨 작업 의사를 밝혀주세요.
 - 멘토가 assign 을 해주면 작업을 시작하세요.
-- 새로운 기능이나 버그 수정을 제안하고 싶다면 새 이슈를 생성해 주세요. 적절한 이슈 템플릿을 골라 작성하세요.
 
-###
+### 패치 Gerrit 업로드 후 진행
+1. `data/contributions/template.md` 파일을 `data/contribtutions/{ChromiumReviewId}.md` 파일로 복사합니다. 
+2. 내용을 채우고 GitHub Pull Request 로 올려주세요. 
 
-새로운 Chromium 컨트리뷰션 내용을 추가하려면:
-
-1. `data/contributions/` 디렉토리에 마크다운 파일을 생성합니다 (예: `my-contribution.md`).
-2. 다음 형식으로 파일을 작성합니다:
-
-```markdown
----
-title: "컨트리뷰션 제목"
-date: "2025-XX-XX"
-author: "작성자 이름"
-authorGithub: "GitHub_사용자명"
----
-
-## 개요
-
-(컨트리뷰션에 대한 간략한 설명)
-
-## 문제 상황
-
-(해결하려는 문제에 대한 설명)
-
-## 해결 방법
-
-(문제를 어떻게 해결했는지 설명)
-
-## 링크
-
-- [관련 Chromium 이슈](이슈 링크)
-- [관련 코드 리뷰](코드 리뷰 링크)
-```
 
 ## 웹사이트 실행 및 확인
 
