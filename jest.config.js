@@ -31,7 +31,7 @@ const customJestConfig = {
     '<rootDir>/.next/',
     '<rootDir>/__tests__/types.d.ts'
   ],
-  testEnvironment: 'jsdom',
+  testEnvironment: 'jest-environment-jsdom',
   transform: {
     // Use babel-jest to transpile tests with the next/babel preset
     '^.+\\.(js|jsx|ts|tsx)$': ['babel-jest', { presets: ['next/babel'] }],

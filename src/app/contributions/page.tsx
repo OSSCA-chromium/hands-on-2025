@@ -4,8 +4,8 @@ import { getAllContributions } from '@/lib/contributions';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: '학생 컨트리뷰션 | Chromium 컨트리뷰션 가이드',
-  description: 'Chromium 프로젝트에 대한 학생들의 컨트리뷰션 모음입니다.',
+  title: 'Contributions | OSSCA Chromium',
+  description: 'Chromium 프로젝트 컨트리뷰션 모음입니다.',
 };
 
 export default function ContributionsPage() {

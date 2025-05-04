@@ -4,11 +4,8 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import Image from 'next/image';
 import React from 'react';
-import fs from 'fs';
 import path from 'path';
-import matter from 'gray-matter';
-import hljs from 'highlight.js';
-import 'highlight.js/styles/atom-one-dark.css';
+import { getMarkdownContent } from '@/lib/markdown';
 
 // 마크다운 파일이 저장된 디렉토리
 const contributionsDirectory = path.join(process.cwd(), 'data/contributions');
@@ -18,138 +15,41 @@ interface ParamsProps {
   params: Promise<{ slug: string }>
 }
 
-// 마크다운을 HTML로 간단히 변환하는 함수
-function simpleMarkdownToHtml(markdown: string): string {
-  // 코드 블록 처리 (```...```) - 가장 먼저 처리해야 함
-  let html = markdown.replace(/```([a-z]*)\n([\s\S]+?)\n```/g, (match, language, code) => {
-    let highlighted;
-    const escapedCode = code.replace(/</g, '&lt;').replace(/>/g, '&gt;');
-    
-    if (language && hljs.getLanguage(language)) {
-      try {
-        // 언어가 지정되어 있고 highlight.js가 지원하는 경우
-        highlighted = hljs.highlight(escapedCode, { language }).value;
-      } catch {
-        highlighted = escapedCode;
-      }
-    } else {
-      // 언어가 지정되지 않았거나 지원하지 않는 경우
-      highlighted = escapedCode;
-    }
-    
-    return `<pre class="bg-gray-800 rounded-md my-4 overflow-x-auto"><code class="hljs p-4 block">${highlighted}</code></pre>`;
-  });
-  
-  // 헤더 변환 (h1~h6)
-  html = html
-    .replace(/^# (.+)$/gm, '<h1 class="text-4xl font-bold my-6">$1</h1>')
-    .replace(/^## (.+)$/gm, '<h2 class="text-3xl font-bold my-5">$1</h2>')
-    .replace(/^### (.+)$/gm, '<h3 class="text-2xl font-bold my-4">$1</h3>')
-    .replace(/^#### (.+)$/gm, '<h4 class="text-xl font-bold my-3">$1</h4>')
-    .replace(/^##### (.+)$/gm, '<h5 class="text-lg font-bold my-2">$1</h5>')
-    .replace(/^###### (.+)$/gm, '<h6 class="text-base font-bold my-2">$1</h6>');
-
-  // 목록 변환 (단순화)
-  // 순서 없는 목록 처리 (-, *, +로 시작)
-  html = html.replace(/^\s*[-*+]\s+(.+)$/gm, '<li class="ml-6 list-disc my-1">$1</li>');
-  html = html.replace(/(<li[^>]*>.*<\/li>\n*)+/g, '<ul class="my-4">$&</ul>');
-  
-  // 순서 있는 목록 처리 (1., 2. 등으로 시작)
-  html = html.replace(/^\s*(\d+)\.\s+(.+)$/gm, '<li class="ml-6 list-decimal my-1">$2</li>');
-  
-  // 순서 있는 목록 항목을 <ol> 태그로 묶기
-  const tempHtml = html.split('\n');
-  let inOrderedList = false;
-  let processedLines = [];
-  
-  for (let i = 0; i < tempHtml.length; i++) {
-    const line = tempHtml[i];
-    
-    if (line.includes('list-decimal')) {
-      if (!inOrderedList) {
-        processedLines.push('<ol class="my-4">');
-        inOrderedList = true;
-      }
-      processedLines.push(line);
-    } else if (inOrderedList && !line.includes('<li')) {
-      processedLines.push('</ol>');
-      inOrderedList = false;
-      processedLines.push(line);
-    } else {
-      processedLines.push(line);
-    }
-  }
-  
-  if (inOrderedList) {
-    processedLines.push('</ol>');
-  }
-  
-  html = processedLines.join('\n');
-  
-  // 인라인 코드
-  html = html.replace(/`([^`]+)`/g, '<code class="bg-gray-100 px-1 py-0.5 rounded text-red-600">$1</code>');
-  
-  // 볼드, 이탤릭
-  html = html.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>');
-  html = html.replace(/\*([^*]+)\*/g, '<em>$1</em>');
-  
-  // 링크
-  html = html.replace(/\[([^\]]+)\]\(([^)]+)\)/g, 
-    '<a href="$2" class="text-[#5893f4] hover:underline">$1</a>');
-  
-  // 인용문 처리 (> 로 시작하는 라인)
-  html = html.replace(/^>\s*(.+)$/gm, (match, content) => {
-    return `<blockquote class="pl-4 border-l-4 border-gray-300 text-gray-700 italic my-4">${content}</blockquote>`;
-  });
-  
-  // 단락 (명시적으로 p 태그 추가)
-  html = html.split(/\n\s*\n/)
-    .map(p => {
-      p = p.trim();
-      if (p === '') return '';
-      if (p.startsWith('<h') || p.startsWith('<ul') || p.startsWith('<pre')) return p;
-      return `<p class="my-4">${p}</p>`;
-    })
-    .join('\n');
-  
-  return html;
+// 컨트리뷰션 데이터 타입 정의
+interface ContributionData {
+  slug: string;
+  title: string;
+  date: string;
+  author: string;
+  contributionUrl: string;
+  labels: string[];
+  status: string;
+  excerpt: string;
+  contentHtml: string;
 }
 
 // 직접 컨트리뷰션 데이터 가져오기
-async function getContributionDirect(slug: string) {
+async function getContributionDirect(slug: string): Promise<ContributionData | null> {
   try {
     const fullPath = path.join(contributionsDirectory, `${slug}.md`);
     
-    if (!fs.existsSync(fullPath)) {
+    const content = await getMarkdownContent(fullPath);
+    
+    if (!content) {
       return null;
     }
     
-    const fileContents = fs.readFileSync(fullPath, 'utf8');
-    const matterResult = matter(fileContents);
-    
-    // 직접 HTML로 변환
-    const contentHtml = simpleMarkdownToHtml(matterResult.content);
-    
-    const excerpt = matterResult.content
-      .split('\n\n')
-      .slice(0, 2)
-      .join('\n\n')
-      .replace(/^#+\s+.+$/gm, '')
-      .substring(0, 160)
-      .trim() + '...';
-    
     return {
       slug,
-      title: matterResult.data.title || '제목 없음',
-      date: matterResult.data.date || new Date().toISOString(),
-      author: matterResult.data.author || '익명',
-      contributionUrl: matterResult.data.contribution_url || '',
-      labels: Array.isArray(matterResult.data.labels) ? matterResult.data.labels : 
-             (matterResult.data.labels ? [matterResult.data.labels] : []),
-      status: matterResult.data.status || '',
-      excerpt,
-      content: matterResult.content,
-      contentHtml,
+      title: content.title || '제목 없음',
+      date: content.date,
+      author: content.author || '익명',
+      contributionUrl: content.contribution_url || '',
+      labels: Array.isArray(content.labels) ? content.labels : 
+             (content.labels ? [content.labels] : []),
+      status: content.status || '',
+      excerpt: content.excerpt,
+      contentHtml: content.contentHtml,
     };
   } catch (error) {
     console.error('컨트리뷰션 데이터 가져오기 오류:', error);
@@ -169,7 +69,7 @@ export async function generateMetadata({ params }: ParamsProps): Promise<Metadat
   }
 
   return {
-    title: `${contribution.title} | Chromium 컨트리뷰션 가이드`,
+    title: `${contribution.title} | OSSCA Chromium`,
     description: contribution.excerpt,
   };
 }
@@ -219,7 +119,7 @@ export default async function ContributionPage({ params }: ParamsProps) {
           
           {/* Labels 칩 */}
           {contribution.labels && contribution.labels.length > 0 && 
-            contribution.labels.map((label, index) => (
+            contribution.labels.map((label: string, index: number) => (
               <span 
                 key={index} 
                 className="px-3 py-1 bg-purple-100 text-purple-800 text-sm rounded-full"

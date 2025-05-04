@@ -9,10 +9,10 @@ describe('레이아웃 컴포넌트', () => {
       <div>
         <header>
           <nav>
-            <a href="/">Chromium 컨트리뷰션 가이드</a>
+            <a href="/">OSSCA Chromium</a>
             <div>
               <a href="/guide">Guide</a>
-              <a href="/contributions">학생 컨트리뷰션</a>
+              <a href="/contributions">Contributions</a>
             </div>
           </nav>
         </header>
@@ -26,11 +26,11 @@ describe('레이아웃 컴포넌트', () => {
     );
     
     // 헤더 검증
-    expect(screen.getByText('Chromium 컨트리뷰션 가이드')).toBeInTheDocument();
+    expect(screen.getByText('OSSCA Chromium')).toBeInTheDocument();
     
     // 네비게이션 링크 검증
     expect(screen.getByText('Guide')).toBeInTheDocument();
-    expect(screen.getByText('학생 컨트리뷰션')).toBeInTheDocument();
+    expect(screen.getByText('Contributions')).toBeInTheDocument();
     
     // 콘텐츠 영역 검증
     expect(screen.getByTestId('content')).toBeInTheDocument();
