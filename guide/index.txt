@@ -9,12 +9,14 @@ c:I[4911,[],"AsyncMetadataOutlet"]
 e:I[9665,[],"ViewportBoundary"]
 10:I[6614,[],""]
 :HL["/hands-on-2025/_next/static/media/a34f9d1faa5f3315-s.p.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
-:HL["/hands-on-2025/_next/static/css/64d6fec35518f954.css","style"]
-0:{"P":null,"b":"uUe0AATts1hOvpJutTUwr","p":"/hands-on-2025","c":["","guide",""],"i":false,"f":[[["",{"children":["guide",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/hands-on-2025/_next/static/css/64d6fec35518f954.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","className":"bg-gray-100","children":["$","body",null,{"className":"__className_9cfde6 bg-gray-100 text-black","children":[["$","header",null,{"className":"bg-[#4285F4] text-white py-4 shadow-md","children":["$","div",null,{"className":"container mx-auto px-4","children":["$","nav",null,{"className":"flex flex-col md:flex-row justify-between items-center","children":[["$","$L2",null,{"href":"/","className":"text-2xl font-bold mb-2 md:mb-0 flex items-center","children":[["$","$L3",null,{"src":{"src":"/hands-on-2025/_next/static/media/logo.bc31a3bb.png","height":954,"width":1394,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAMAAABPT11nAAAATlBMVEVgW12ZwfmTufYda1waIhtLir4YYIoBMyh+fHwAJR0AZVE1SEAEemMjQzwALR6xz/ggdOERWJAlet2QtvUpgOoUVUieyP9zrv8tPjus0v/5iGvfAAAAFXRSTlP9wdv9/vvvzP79NfM22uvu1f42Nf52eNs9AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAM0lEQVR4nAXBBwKAMAgEsOsEtFtB+/+PNkEhafkdC6RBJZmDgBGndRCYY9oOV/3v/PnnACYvAbECXypkAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":5},"alt":"OSSCA Chromium 로고","width":32,"height":32,"className":"mr-2"}],"OSSCA Chromium"]}],["$","div",null,{"className":"flex gap-6","children":[["$","$L2",null,{"href":"/guide","className":"hover:text-gray-200","children":"Guide"}],["$","$L2",null,{"href":"/contributions","className":"hover:text-gray-200","children":"Contributions"}]]}]]}]}]}],["$","main",null,{"className":"container mx-auto px-4 py-8","children":["$","div",null,{"className":"bg-white rounded-lg p-6","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"flex flex-col items-center justify-center py-20","children":[["$","h1",null,{"className":"text-4xl font-bold mb-4","children":"404"}],["$","h2",null,{"className":"text-2xl mb-6","children":"페이지를 찾을 수 없습니다"}],["$","p",null,{"className":"mb-8 text-gray-600","children":"요청하신 페이지가 존재하지 않거나 이동되었을 수 있습니다."}],["$","$L2",null,{"href":"/","className":"px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors","children":"홈으로 돌아가기"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}],["$","footer",null,{"className":"bg-gray-100 text-gray-600 py-4 mt-6","children":["$","div",null,{"className":"container mx-auto px-4 text-center","children":["$","p",null,{"children":["© ",2025," OSSCA Chromium. All rights reserved."]}]}]}]]}]}]]}],{"children":["guide",["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L6",["$","$L7",null,{"children":"$L8"}],null,["$","$L9",null,{"children":["$La","$Lb",["$","$Lc",null,{"promise":"$@d"}]]}]]}],{},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","3Wyqeo64gg61eE7IgcHQJ",{"children":[["$","$Le",null,{"children":"$Lf"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$10","$undefined"],"s":false,"S":true}
+:HL["/hands-on-2025/_next/static/css/1e2bebebf35353d6.css","style"]
+:HL["/hands-on-2025/_next/static/css/7f6bd37aab40623f.css","style"]
+0:{"P":null,"b":"KgAe00z2m5X5WyQrhH_2g","p":"/hands-on-2025","c":["","guide",""],"i":false,"f":[[["",{"children":["guide",{"children":["__PAGE__",{}]}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/hands-on-2025/_next/static/css/1e2bebebf35353d6.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"ko","className":"bg-gray-100","children":["$","body",null,{"className":"__className_9cfde6 bg-gray-100 text-black","children":[["$","header",null,{"className":"bg-[#4285F4] text-white py-4 shadow-md","children":["$","div",null,{"className":"container mx-auto px-4","children":["$","nav",null,{"className":"flex flex-col md:flex-row justify-between items-center","children":[["$","$L2",null,{"href":"/","className":"text-2xl font-bold mb-2 md:mb-0 flex items-center","children":[["$","$L3",null,{"src":{"src":"/hands-on-2025/_next/static/media/logo.bc31a3bb.png","height":954,"width":1394,"blurDataURL":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAFCAMAAABPT11nAAAATlBMVEVgW12ZwfmTufYda1waIhtLir4YYIoBMyh+fHwAJR0AZVE1SEAEemMjQzwALR6xz/ggdOERWJAlet2QtvUpgOoUVUieyP9zrv8tPjus0v/5iGvfAAAAFXRSTlP9wdv9/vvvzP79NfM22uvu1f42Nf52eNs9AAAACXBIWXMAABYlAAAWJQFJUiTwAAAAM0lEQVR4nAXBBwKAMAgEsOsEtFtB+/+PNkEhafkdC6RBJZmDgBGndRCYY9oOV/3v/PnnACYvAbECXypkAAAAAElFTkSuQmCC","blurWidth":8,"blurHeight":5},"alt":"OSSCA Chromium 로고","width":32,"height":32,"className":"mr-2"}],"OSSCA Chromium"]}],["$","div",null,{"className":"flex gap-6","children":[["$","$L2",null,{"href":"/guide","className":"hover:text-gray-200","children":"Guide"}],["$","$L2",null,{"href":"/contributions","className":"hover:text-gray-200","children":"Contributions"}]]}]]}]}]}],["$","main",null,{"className":"container mx-auto px-4 py-8","children":["$","div",null,{"className":"bg-white rounded-lg p-6","children":["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[["$","div",null,{"className":"flex flex-col items-center justify-center py-20","children":[["$","h1",null,{"className":"text-4xl font-bold mb-4","children":"404"}],["$","h2",null,{"className":"text-2xl mb-6","children":"페이지를 찾을 수 없습니다"}],["$","p",null,{"className":"mb-8 text-gray-600","children":"요청하신 페이지가 존재하지 않거나 이동되었을 수 있습니다."}],["$","$L2",null,{"href":"/","className":"px-6 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors","children":"홈으로 돌아가기"}]]}],[]],"forbidden":"$undefined","unauthorized":"$undefined"}]}]}],["$","footer",null,{"className":"bg-gray-100 text-gray-600 py-4 mt-6","children":["$","div",null,{"className":"container mx-auto px-4 text-center","children":["$","p",null,{"children":["© ",2025," OSSCA Chromium. All rights reserved."]}]}]}]]}]}]]}],{"children":["guide",["$","$1","c",{"children":[null,["$","$L4",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L5",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":"$undefined","forbidden":"$undefined","unauthorized":"$undefined"}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L6",["$","$L7",null,{"children":"$L8"}],[["$","link","0",{"rel":"stylesheet","href":"/hands-on-2025/_next/static/css/7f6bd37aab40623f.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","$L9",null,{"children":["$La","$Lb",["$","$Lc",null,{"promise":"$@d"}]]}]]}],{},null,false]},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","vMih9AdzaSj4GqtdKzGvs",{"children":[["$","$Le",null,{"children":"$Lf"}],["$","meta",null,{"name":"next-size-adjust","content":""}]]}],null]}],false]],"m":"$undefined","G":["$10","$undefined"],"s":false,"S":true}
 11:"$Sreact.suspense"
 12:I[4911,[],"AsyncMetadata"]
 8:["$","$11",null,{"fallback":null,"children":["$","$L12",null,{"promise":"$@13"}]}]
-14:T1a22,<h1 class="text-3xl font-bold mt-6 mb-4">Chromium 프로젝트 소개 및 컨트리뷰션 가이드</h1>
+b:null
+14:T1bd3,<h1 class="text-3xl font-bold mt-6 mb-4">Chromium 프로젝트 소개 및 컨트리뷰션 가이드</h1>
 
 <h2 class="text-2xl font-semibold mt-6 mb-3">개요</h2>
 
@@ -33,39 +35,36 @@ e:I[9665,[],"ViewportBoundary"]
 
 <p class="my-4">Depot Tools는 Chromium 개발에 필요한 도구 모음입니다.</p>
 
-<pre class="bg-gray-100 p-4 rounded my-4 overflow-x-auto"><code>
-   git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
+<pre class="bg-gray-800 rounded-md my-4 overflow-x-auto"><code class="hljs p-4 block">   git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
    export PATH="$PATH:/path/to/depot_tools"
-   </code></pre>
+   ``<code class="bg-gray-100 px-1 py-0.5 rounded text-red-600">
 
 <p class="my-4">2. <strong>Chromium 소스 코드 다운로드</strong></p>
 
 <p class="my-4">다음 명령어를 사용하여 Chromium 소스 코드를 다운로드합니다.</p>
 
-<pre class="bg-gray-100 p-4 rounded my-4 overflow-x-auto"><code>
+</code>`<code class="bg-gray-100 px-1 py-0.5 rounded text-red-600">
    mkdir chromium && cd chromium
    fetch --nohooks chromium
    cd src
    git checkout main
-   </code></pre>
+   </code>`<code class="bg-gray-100 px-1 py-0.5 rounded text-red-600">
 
 <p class="my-4">3. <strong>빌드 의존성 설치</strong></p>
 
-<pre class="bg-gray-100 p-4 rounded my-4 overflow-x-auto"><code>
+</code>`<code class="bg-gray-100 px-1 py-0.5 rounded text-red-600">
    ./build/install-build-deps.sh  # Linux의 경우
    # macOS나 Windows는 해당 문서를 참조하세요
-   </code></pre>
+   </code>`<code class="bg-gray-100 px-1 py-0.5 rounded text-red-600">
 
 <h2 class="text-2xl font-semibold mt-6 mb-3">첫 번째 빌드</h2>
 
-<p class="my-4">Chromium을 빌드하려면 다음 단계를 따르세요:</p>
-
-<pre class="bg-gray-100 p-4 rounded my-4 overflow-x-auto"><code>
+<p class="my-4">Chromium을 빌드하려면 다음 단계를 따르세요:
+</code></pre>
 gn gen out/Default
 autoninja -C out/Default chrome
-</code></pre>
-
-<p class="my-4">이 과정은 시스템 사양에 따라 30분에서 몇 시간까지 소요될 수 있습니다.</p>
+<pre class="bg-gray-800 rounded-md my-4 overflow-x-auto"><code class="hljs p-4 block">
+이 과정은 시스템 사양에 따라 30분에서 몇 시간까지 소요될 수 있습니다.</p>
 
 <h2 class="text-2xl font-semibold mt-6 mb-3">컨트리뷰션 워크플로우</h2>
 
@@ -80,9 +79,9 @@ autoninja -C out/Default chrome
 
 <h2 class="text-2xl font-semibold mt-6 mb-3">이슈 찾기</h2>
 
-<p class="my-4">첫 번째 컨트리뷰션을 위한 이슈를 찾는 좋은 방법은 <code class="bg-gray-100 px-1 rounded">good-first-bug</code> 레이블이 있는 이슈를 찾는 것입니다.</p>
+<p class="my-4">첫 번째 컨트리뷰션을 위한 이슈를 찾는 좋은 방법은 </code>good-first-bug<code class="bg-gray-100 px-1 py-0.5 rounded text-red-600"> 레이블이 있는 이슈를 찾는 것입니다.</p>
 
-<a href="https://bugs.chromium.org/p/chromium/issues/list?q=label:good-first-bug" class="text-blue-600 hover:underline" target="_blank" rel="noopener noreferrer">Good First Bugs 목록 보기</a>
+<a href="https://bugs.chromium.org/p/chromium/issues/list?q=label:good-first-bug" class="text-[#5893f4] hover:underline" target="_blank" rel="noopener noreferrer">Good First Bugs 목록 보기</a>
 
 <p class="my-4">또한 자신의 관심 영역이나 전문 분야와 관련된 이슈를 찾아보는 것도 좋은 방법입니다.</p>
 
@@ -92,9 +91,9 @@ autoninja -C out/Default chrome
 
 <p class="my-4">1. <strong>새 브랜치 생성하기</strong></p>
 
-<pre class="bg-gray-100 p-4 rounded my-4 overflow-x-auto"><code>
+</code>`<code class="bg-gray-100 px-1 py-0.5 rounded text-red-600">
    git checkout -b my_feature origin/main
-   </code></pre>
+   </code>`<code class="bg-gray-100 px-1 py-0.5 rounded text-red-600">
 
 <p class="my-4">2. <strong>코드 수정하기</strong></p>
 
@@ -104,10 +103,10 @@ autoninja -C out/Default chrome
 
 <p class="my-4">변경한 코드가 제대로 작동하는지 확인합니다.</p>
 
-<pre class="bg-gray-100 p-4 rounded my-4 overflow-x-auto"><code>
+</code>`<code class="bg-gray-100 px-1 py-0.5 rounded text-red-600">
    autoninja -C out/Default chrome
    out/Default/chrome  # 빌드된 Chrome 실행
-   </code></pre>
+   </code>`<code class="bg-gray-100 px-1 py-0.5 rounded text-red-600">
 
 <h2 class="text-2xl font-semibold mt-6 mb-3">코드 스타일 및 리뷰 준비</h2>
 
@@ -118,15 +117,14 @@ autoninja -C out/Default chrome
 - 코드 변경 사항에 대한 명확한 커밋 메시지 작성</p>
 
 <h3 class="text-xl font-semibold mt-5 mb-2">커밋 메시지 형식</h3>
-
-<pre class="bg-gray-100 p-4 rounded my-4 overflow-x-auto"><code>
+</code></pre>
 [컴포넌트]: 변경 사항에 대한 간결한 설명
 
 <p class="my-4">버그: 123456
 변경에 대한 상세 설명.</p>
 
 <p class="my-4">Change-Id: I1234567890abcdef
-</code></pre></p>
+</code>`<code class="bg-gray-100 px-1 py-0.5 rounded text-red-600"></p>
 
 <h2 class="text-2xl font-semibold mt-6 mb-3">코드 리뷰 요청하기</h2>
 
@@ -134,9 +132,9 @@ autoninja -C out/Default chrome
 
 <p class="my-4">1. <strong>변경 사항 업로드하기</strong></p>
 
-<pre class="bg-gray-100 p-4 rounded my-4 overflow-x-auto"><code>
+</code>`<code class="bg-gray-100 px-1 py-0.5 rounded text-red-600">
    git cl upload
-   </code></pre>
+   </code>`<code class="bg-gray-100 px-1 py-0.5 rounded text-red-600">
 
 <p class="my-4">이 명령어는 변경 사항을 Gerrit에 업로드하고 코드 리뷰 URL을 제공합니다.</p>
 
@@ -155,12 +153,12 @@ autoninja -C out/Default chrome
 
 <p class="my-4">1. <strong>피드백에 따라 코드 수정하기</strong></p>
 
-<pre class="bg-gray-100 p-4 rounded my-4 overflow-x-auto"><code>
+</code>`<code class="bg-gray-100 px-1 py-0.5 rounded text-red-600">
    # 코드 수정 후
    git add 수정된_파일
    git commit --amend
    git cl upload
-   </code></pre>
+   </code>`<code class="bg-gray-100 px-1 py-0.5 rounded text-red-600">
 
 <p class="my-4">2. <strong>승인 받기</strong></p>
 
@@ -171,13 +169,12 @@ autoninja -C out/Default chrome
 
 <p class="my-4">필요한 승인을 받았다면, CL을 제출합니다:</p>
 
-<pre class="bg-gray-100 p-4 rounded my-4 overflow-x-auto"><code>
+</code>`<code class="bg-gray-100 px-1 py-0.5 rounded text-red-600">
    git cl land
-   </code></pre>
+   </code>``
 
 <p class="my-4">축하합니다! 이제 여러분은 Chromium 프로젝트에 기여한 개발자입니다.</p>6:["$","article",null,{"className":"max-w-4xl mx-auto p-4","children":[["$","header",null,{"className":"mb-6","children":[["$","h1",null,{"className":"text-4xl font-bold mb-2 text-black","children":"Chromium 프로젝트 소개 및 컨트리뷰션 가이드"}],["$","div",null,{"className":"flex items-center text-gray-500 mb-4","children":[["$","span",null,{"className":"mr-4","children":"2025. 1. 1."}],["$","span",null,{"children":"OSSCA Chromium 팀"}]]}]]}],["$","main",null,{"className":"markdown-content text-black","dangerouslySetInnerHTML":{"__html":"$14"}}]]}]
-b:null
 f:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
 a:null
-13:{"metadata":[["$","title","0",{"children":"Chromium 프로젝트 소개 및 컨트리뷰션 가이드"}],["$","meta","1",{"name":"description","content":"Chromium 프로젝트 소개 및 컨트리뷰션에 대한 자세한 가이드입니다."}],["$","link","2",{"rel":"icon","href":"/hands-on-2025/favicon.ico","type":"image/x-icon","sizes":"1394x954"}]],"error":null,"digest":"$undefined"}
+13:{"metadata":[["$","title","0",{"children":"Guide | OSSCA Chromium"}],["$","meta","1",{"name":"description","content":"Chromium 프로젝트 소개 및 컨트리뷰션에 대한 자세한 가이드입니다."}],["$","link","2",{"rel":"icon","href":"/hands-on-2025/favicon.ico","type":"image/x-icon","sizes":"1394x954"}]],"error":null,"digest":"$undefined"}
 d:{"metadata":"$13:metadata","error":null,"digest":"$undefined"}
