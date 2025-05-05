@@ -1,8 +1,8 @@
 ---
-title: Gerrit 에 올린 commit 제목을 입력하세요
+title: "Gerrit 에 올린 commit 제목을 입력하세요"
 date: YYYY-MM-DD
-author: githubId
-contribution_url: https://crrev.com/c/XXXXX # XXXXX from https://chromium-review.googlesource.com/c/chromium/src/+/XXXXX
+author: GitHubId # github.com/GitHubId
+contribution_url: https://crrev.com/c/XXXXX # Add XXXXX from https://chromium-review.googlesource.com/c/chromium/src/+/XXXXX
 labels: ["label1", "label2"] # directory name and detail
 status: in review # in review, merged 중 하나 선택
 ---
