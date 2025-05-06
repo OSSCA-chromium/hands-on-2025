@@ -13,17 +13,17 @@ export default function Home() {
       <section className="mb-9">
         <h2 className="text-2xl font-bold mb-5 text-black">Recent contributions</h2>
         {contributions.length > 0 ? (
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {contributions.map((contribution) => (
               <Link 
                 href={`/contributions/${contribution.slug}`} 
                 key={contribution.slug}
                 className="block p-5 border border-gray-200 rounded-lg hover:shadow-md transition-shadow bg-white h-full flex flex-col"
               >
-                <h3 className="text-xl font-semibold mb-1 text-black">{contribution.title}</h3>
+                <h3 className="text-xl font-semibold mb-2 text-black line-clamp-2">{contribution.title}</h3>
                 
                 {/* Status 배지 및 Labels */}
-                <div className="flex flex-wrap gap-2 mb-1">
+                <div className="flex flex-wrap gap-2 mb-3">
                   {/* Status 배지 */}
                   {contribution.status && (
                     <span className={`px-2 py-1 text-xs text-white rounded-full font-medium ${
@@ -53,7 +53,7 @@ export default function Home() {
                 </div>
                 
                 <div className="text-sm text-gray-500 mb-3 flex items-center">
-                  <span className="flex items-center">{new Date(contribution.date).toLocaleDateString('ko-KR')}</span> 
+                  <span>{new Date(contribution.date).toLocaleDateString('ko-KR')}</span> 
                   {/* GitHub 유저 이름 형식인지 확인 */}
                   {isValidGithubUsername(contribution.author) ? (
                     <span className="flex items-center ml-2">
@@ -64,14 +64,14 @@ export default function Home() {
                         height={18}
                         className="rounded-full mr-1"
                       />
-                      <span className="inline-block align-middle">{contribution.author}</span>
+                      <span>{contribution.author}</span>
                     </span>
                   ) : (
-                    <span className="ml-2 flex items-center">{contribution.author}</span>
+                    <span className="ml-2">{contribution.author}</span>
                   )}
                 </div>
                 
-                <p className="text-black mb-4 flex-grow">{contribution.excerpt}</p>
+                <p className="text-black mb-4 flex-grow line-clamp-3">{contribution.excerpt}</p>
                 
                 <div className="text-[#5893f4] text-sm font-medium mt-auto">
                   더 읽기 →
