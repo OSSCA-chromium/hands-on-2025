@@ -31,15 +31,15 @@ author: OSSCA Chromium
 - [MDN docs](https://developer.mozilla.org/docs/Web)
 - [Can I Use](https://caniuse.com)
 - Build Instructions
-  - [리눅스](https://chromium.googlesource.com/chromium/src/+/main/docs/linux/build_instructions.md)
-  - [맥](https://chromium.googlesource.com/chromium/src/+/main/docs/mac_build_instructions.md)
+  - [Linux](https://chromium.googlesource.com/chromium/src/+/main/docs/linux/build_instructions.md)
+  - [Mac](https://chromium.googlesource.com/chromium/src/+/main/docs/mac_build_instructions.md)
 - Contribution Guide
-  - [CODE OF CONDUCT](https://chromium.googlesource.com/chromium/src/+/main/CODE_OF_CONDUCT.md)
-  - [contributing](https://chromium.googlesource.com/chromium/src/+/main/docs/contributing.md
-  - [gerrit guide](https://chromium.googlesource.com/chromium/src/+/main/docs/gerrit_guide.md)
-  - [commit checklist](https://chromium.googlesource.com/chromium/src/+/main/docs/commit_checklist.md)
+  - https://chromium.googlesource.com/chromium/src/+/main/CODE_OF_CONDUCT.md
+  - https://chromium.googlesource.com/chromium/src/+/main/docs/contributing.md
+  - https://chromium.googlesource.com/chromium/src/+/main/docs/gerrit_guide.md
+  - https://chromium.googlesource.com/chromium/src/+/main/docs/commit_checklist.md
 - Code Review
-  - [code review](https://chromium.googlesource.com/chromium/src/+/main/docs/code_reviews.md)
-  - [cl respect](https://chromium.googlesource.com/chromium/src/+/main/docs/cl_respect.md)
-  - [cr respect](https://chromium.googlesource.com/chromium/src/+/main/docs/cr_respect.md)
-  - [cl tips](https://chromium.googlesource.com/chromium/src/+/main/docs/cl_tips.md)
+  - https://chromium.googlesource.com/chromium/src/+/main/docs/code_reviews.md
+  - https://chromium.googlesource.com/chromium/src/+/main/docs/cl_respect.md
+  - https://chromium.googlesource.com/chromium/src/+/main/docs/cr_respect.md
+  - https://chromium.googlesource.com/chromium/src/+/main/docs/cl_tips.md
