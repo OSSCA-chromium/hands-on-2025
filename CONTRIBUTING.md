@@ -45,19 +45,23 @@ $ git push origin 250420-test
 2. 모든 건 실명으로 (영어이름 성)
 3. https://chromium-review.googlesource.com 가입하기
 4. git config user.name "실명 영어로"
-5. git config.user.email "email 주소"
+5. git config.user.email "email 주소" (gerrit 가입 이메일과 동일해야 함)
 6. 하고 싶은 이슈에 댓글 달기
 7. 멘토가 이슈를 assign 하면 작업 진행
 8. Checklist 내용을 진행하면서 작업한 내용을 댓글로 달기
+9. 진행 상태에 따라 이슈의 Status 를 `멘티 작업 진행 중` -> `멘토 리뷰 중` -> `gerrit 리뷰 중` -> `반영 완료` 로 변경 
 
 #### Checklist
-- [ ] AUTHORS 파일에 이름, 이메일 추가
-- [ ] 마크다운 문서 로컬에서 확인해보기 `./tools/md_browser/md_browser.py`
+- [ ] src/AUTHORS 파일에 이름, 이메일 추가 (알파벳 순, gerrit, git 이메일과 동일)
+- [ ] 마크다운 문서 로컬에서 확인해보기 `./tools/md_browser/md_browser.py` 실행 -> http://localhost:8080 에서 확인
 - [ ] 이슈에 써 있는 부분 외에 추가로 깨진 부분 있는지 확인해보기 (다른 링크도 눌러보기)
 - [ ] https://source.chromium.org/chromium 에서 깨진 링크를 갖고 있는 파일이 또 있는지 찾아보기
 - [ ] 언제 어떤 코드(gerrit 주소)로 이 내용이 추가 또는 수정되었는지 찾기
 - [ ] 수정한 파일과 AUTHORS 파일 포함해서 commit 만들기 -> commit 메시지 GitHub에 댓글로 달아서 멘토 확인받기
+- [ ] commit 을 만든 후 `git cl upload` 으로 gerrit 에 업로드
 - [ ] 업로드 후 해당 패치을 리뷰해줄 적절한 리뷰어 찾기 -> GitHub 댓글로 먼저 멘토에게 확인받기
+- [ ] docs 폴더인 경우 멘토를 리뷰어에 추가 / 다른 폴더인 경우 CC로 추가
+- [ ] 멘토 이메일 주소: eui-sang.lim@samsung.com 
 
 ### commit message rule
 ```
@@ -78,7 +82,8 @@ Bug: 123456
 - `css: Fix something` 또는 `[CSS] Fix something` 또는 `Fix something`
 - 앞에 `이름:` 를 붙이면 Gerrit 에서 `이름`이 태그로 추가 됨 
 - 문장 첫 단어는 동사(현재형), 첫 글자는 대문자로 시작, 뒤에는 마침표 없이
-- Add, Fix, Implement 등등
+- Add, Fix, Implement 등등으로 시작
+- 72 문자 후 줄바꿈
 
 ### 패치 Gerrit 업로드 후 진행
 1. `data/contributions/template.md` 파일을 `data/contribtutions/{ChromiumReviewId}.md` 파일로 복사합니다. 

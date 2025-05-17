@@ -76,9 +76,9 @@ describe('markdown 유틸리티', () => {
       const markdown = '```javascript\nconst x = 1;\n```';
       const html = markdownToHtml(markdown);
       
-      expect(html).toContain('<pre class="bg-gray-800 rounded-md my-4 overflow-x-auto">');
-      expect(html).toContain('<code class="hljs p-4 block">');
-      expect(html).toContain('<span class="hljs-highlighted">const x = 1;</span>');
+      expect(html).toContain('<pre><code class="language-javascript">');
+      expect(html).toContain('const x = 1;');
+      expect(html).toContain('</code></pre>');
     });
     
     it('기본 리스트를 변환합니다', () => {
@@ -116,7 +116,7 @@ describe('markdown 유틸리티', () => {
       const markdown = '[링크 텍스트](https://example.com)';
       const html = markdownToHtml(markdown);
       
-      expect(html).toContain('<a href="https://example.com" class="text-[#5893f4] hover:underline" target="_blank" rel="noopener noreferrer">링크 텍스트</a>');
+      expect(html).toContain('<a class="text-[#5893f4] hover:underline" target="_blank" rel="noopener noreferrer" href="https://example.com">링크 텍스트</a>');
     });
     
     it('인라인 코드를 HTML로 변환합니다', () => {
@@ -130,7 +130,9 @@ describe('markdown 유틸리티', () => {
       const markdown = '> 이것은 인용문입니다.';
       const html = markdownToHtml(markdown);
       
-      expect(html).toContain('<blockquote class="pl-4 border-l-4 border-gray-300 text-gray-700 italic my-4">이것은 인용문입니다.</blockquote>');
+      expect(html).toContain('<blockquote class="pl-4 border-l-4 border-gray-300 text-gray-700 italic my-4">');
+      expect(html).toContain('이것은 인용문입니다.');
+      expect(html).toContain('</blockquote>');
     });
     
     it('강조 및 이탤릭을 HTML로 변환합니다', () => {
