@@ -1,7 +1,7 @@
 ---
-name: Chromium Feature 실습
-about: 'Chromium Feature 찾아보기 '
-title: ''
+name: 5주차 Chromium Feature 실습
+about: Chromium Feature 찾아보기
+title: "[5주차] 이름"
 labels: excercise
 assignees: ''
 
@@ -19,8 +19,8 @@ assignees: ''
 _components/ 밑에 있는 폴더를 하나 선정해서 적어주세요. (components/{feature})_
 - .
 
-#### Issue Tracker Component 이름 
-_https://issues.chromium.org/ 에서 관련한 Component 이름 찾아보기_
+#### Issue Tracker Component 이름과 이슈 찾아보기
+_https://issues.chromium.org/ 에서 관련한 Component 이름을 찾고 해당 Component 의 open issue 중 하나를 확인해보세요._
 - .
 
 #### Chrome 에서 사용하는 방법
@@ -41,6 +41,5 @@ _components/{feature}, content/{feature} 폴더 등_
 _관련된 다른 폴더가 어떤게 있는지?, 어떤 public 폴더를 참조하는지 등_
 - .
 
-#### 각 폴더의 주요 클래스와 어떤 기능을 할지 유추해 보기
-- . 
-
+#### 각 폴더의 주요 클래스를 찾고 어떤 기능을 할지 유추해 보기
+- .
